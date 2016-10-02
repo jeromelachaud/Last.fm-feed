@@ -1,0 +1,23 @@
+.name {
+  color: white;
+  font-size: 2rem;
+}
+
+.logo {
+  width: 5rem;
+}
+
+/* Usercard */
+.user {
+  font-size: 2rem;
+  width: 25rem;
+  margin: 5px auto;
+  background-color: rgba(255,255,255,0.3);
+}
+
+@media screen and (min-width: 860px) {
+  .user {
+    width: auto;
+    border: 0;
+  }
+}
