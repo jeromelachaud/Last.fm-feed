@@ -3,7 +3,7 @@ import './User.css';
 import logo from './logo.svg';
 import axios from 'axios';
 
-let List = React.createClass ({
+let User = React.createClass ({
   getInitialState: function() {
     return {
       data: []
@@ -43,4 +43,5 @@ let List = React.createClass ({
   }
 });
 
-export default List;
+export default User;
+
