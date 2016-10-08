@@ -18,7 +18,7 @@ html {
 
 body {
   font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: white;
+  color: grey;
 }
 
 img {
@@ -37,4 +37,17 @@ a:active {
 ul {
   padding: 0;
   list-style-type: none;
+}
+
+.App {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  font-size: 2rem;
+  padding-top: 3rem;
+}
+
+.grid {
+  width: 30rem;
+  margin: 0 auto;
 }

@@ -1,4 +1,4 @@
-import GeoPattern from 'geopattern';
+// import GeoPattern from 'geopattern';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -10,9 +10,9 @@ ReactDOM.render(
 );
 
 // Background generation
-const pattern = GeoPattern.generate('lastFmActivities', {
-  color: '#B90000',
-  generator: 'plusSigns'
-});
-let backgroundImg = pattern.toDataUrl();
-document.body.style.backgroundImage = backgroundImg;
+// const pattern = GeoPattern.generate('lastFmActivities', {
+//   color: '#B90000',
+//   generator: 'plusSigns'
+// });
+// let backgroundImg = pattern.toDataUrl();
+// document.body.style.backgroundImage = backgroundImg;

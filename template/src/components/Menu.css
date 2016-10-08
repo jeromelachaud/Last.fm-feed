@@ -1,0 +1,20 @@
+.Menu {
+  position: fixed;
+  right: 20px;
+  width: auto;
+  text-align: right;
+  background-color: grey;
+}
+
+.Menu__list {
+  text-align: right;
+}
+
+.Menu__item{
+    color: rgba(255,255,255,0.6);
+}
+
+.Menu__item:hover,
+.Menu__item.active{
+    background-color: rgba(255,255,255,0.4);
+}
