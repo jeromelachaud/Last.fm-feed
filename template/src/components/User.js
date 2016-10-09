@@ -4,21 +4,21 @@ import './User.css';
 let User = React.createClass ({
 
   render() {
-    // const {
-    //   state
-    // } = this.props;
-
-    let displayUsername;
-    // if (this.state.data.user) {
-    //   displayUsername = (
-    //     <span>{this.state.data.user.name}</span>
-    //   );
-    // }
+    const {
+      name,
+      playcount,
+      date
+    } = this.props;
 
     return (
       <div
         className="User">
-        {this.props.name}
+        <ul
+          className="User__info">
+          <li>{name}</li>
+          <li>{playcount}</li>
+          <li>{date}</li>
+        </ul>
       </div>
     );
   }

@@ -1,0 +1,30 @@
+/* List */
+.LatestsTracks__item {
+  margin-bottom: 5rem;
+}
+
+.LatestsTracks__item a:link,
+.LatestsTracks__item a:visited {
+  color: #111111;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.LatestsTracks__item a:active {
+  color: lime;
+  text-decoration: none;
+}
+
+.LatestsTracks__item a:hover {
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.LatestsTracks__info {
+  padding: 1rem 0 0.7rem 0.7rem;
+  width: 300px;
+}
+
+.date {
+  font-size: 80%; }

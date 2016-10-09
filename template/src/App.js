@@ -1,25 +1,44 @@
 import React from 'react';
-import Menu from './components/Menu';
-import User from './components/User';
+import Sidebar from './components/Sidebar';
+// import Lists from './components/Lists';
 import './App.css';
 import axios from 'axios';
+
+const baseURL = 'http://ws.audioscrobbler.com/2.0/';
+const apiKey = 'ce36645ab9a1ec3fc807f3ef8ef729b7';
+const userName = 'PatBateman75';
+const getMethod = 'get';
 
 let App = React.createClass ({
   getInitialState: function() {
     return {
-      data: []
+      user: [],
+      recentTracks:[]
     };
   },
 
   componentDidMount() {
-    let instance = axios.create({
-      url: '?format=json&method=user.getinfo&user=PatBateman75&api_key=ce36645ab9a1ec3fc807f3ef8ef729b7',
-      baseURL: 'http://ws.audioscrobbler.com/2.0/'
-    });
-    instance()
-    .then(function(response) {
-      this.setState({data: response.data});
-    }.bind(this));
+    function getRecentTracks() {
+      return axios({
+        getMethod,
+        baseURL,
+        url: `?format=json&method=user.getrecenttracks&user=${userName}&api_key=${apiKey}`
+      });
+    }
+    function getUserInfo() {
+      return axios({
+        getMethod,
+        baseURL,
+        url: `?format=json&method=user.getinfo&user=${userName}&api_key=${apiKey}`
+      });
+    }
+    axios.all([getRecentTracks(), getUserInfo()])
+    .then(axios.spread((recentTracks, user) => {
+      this.setState({
+        recentTracks: recentTracks.data.recenttracks.track,
+        user: user.data.user
+      });
+    }));
   },
 
   componentWillUnmount: function() {
@@ -27,17 +46,15 @@ let App = React.createClass ({
   },
 
   render() {
-    const Appstate = this.state.data.user;
-    console.log(Appstate);
+    let user = this.state.user;
+    let recentTracks = this.state.recentTracks;
+    console.log(recentTracks);
 
     return (
       <div className="App">
-        <div className="App-header">
-          <User
-            name="joe">
-          </User>
-        </div>
-        <Menu/>
+        <Sidebar
+          user={user}>
+        </Sidebar>
       </div>
     );
   }

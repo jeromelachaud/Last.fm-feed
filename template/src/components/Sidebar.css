@@ -1,0 +1,14 @@
+/* Sidebar */
+
+.Logo {
+  width: 5rem;
+}
+
+.Sidebar {
+  position: fixed;
+  right: 20px;
+  width: auto;
+  text-align: right;
+  background-color: grey;
+  color: white;
+}
