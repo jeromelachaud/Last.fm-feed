@@ -1,30 +1,20 @@
 import React from 'react';
 import './RecentTracks.css';
+import _map from 'lodash/map';
 
 let RecentTracks = React.createClass ({
 
   render() {
-    // const {
-    //   artist,
-    //   album,
-    //   date
-    // } = this.props.track;
+    const recentTracks = this.props.recentTracks;
+
+    // const recentTracksItems =
 
     return (
-      <ul
-        className="RecentTracks">
-        <li
-          className="RecentTracks_item">
-          <a href="#0">
-            <img src="" />
-            <ul
-              className="RecentTracks__info">
-              {/* <li>{artist}</li>
-              <li>{album}</li> */}
-            </ul>
-          </a>
-        </li>
-      </ul>
+    <section>
+
+      {recentTracksItems}
+
+    </section>
     );
   }
 });

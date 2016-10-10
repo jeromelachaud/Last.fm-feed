@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from './components/Sidebar';
+import RecentTracks from './components/RecentTracks';
 // import Lists from './components/Lists';
 import './App.css';
 import axios from 'axios';
@@ -53,8 +54,9 @@ let App = React.createClass ({
     return (
       <div className="App">
         <Sidebar
-          user={user}>
-        </Sidebar>
+          user={user} />
+        <RecentTracks
+          recentTracks={recentTracks}/>
       </div>
     );
   }
