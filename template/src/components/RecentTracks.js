@@ -1,5 +1,6 @@
 import React from 'react';
 import './RecentTracks.css';
+import RecentTrack from './RecentTrack.js';
 import _map from 'lodash/map';
 
 let RecentTracks = React.createClass ({
@@ -7,13 +8,20 @@ let RecentTracks = React.createClass ({
   render() {
     const recentTracks = this.props.recentTracks;
 
-    // const recentTracksItems =
+    let RecentTrackElement;
+    if (recentTracks) {
+      RecentTrackElement = _map(recentTracks, (name,url, i) => (
+        <RecentTrack
+          url={url}
+          key={i}
+          name={name} />
+      ));
+    }
 
     return (
-    <section>
-
-      {recentTracksItems}
-
+    <section
+      className="RecentTracks">
+      {RecentTrackElement}
     </section>
     );
   }

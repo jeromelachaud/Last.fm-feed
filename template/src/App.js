@@ -49,7 +49,6 @@ let App = React.createClass ({
   render() {
     let user = this.state.user;
     let recentTracks = this.state.recentTracks;
-    console.log(recentTracks);
 
     return (
       <div className="App">

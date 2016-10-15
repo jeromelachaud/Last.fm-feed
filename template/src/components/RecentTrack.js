@@ -4,27 +4,23 @@ import './RecentTrack.css';
 let RecentTrack = React.createClass ({
 
   render() {
-
-    // const {
-    //   artist,
-    //   album
-    // } = this.const.recentTracks
+    const {name} = this.props.name;
+    const {url} = this.props.url;
 
     return (
-        <ul
-          className="RecentTrack">
-          <li
-            className="RecentTrack_item">
-            <a href="#0">
-              <img src="" />
-              <ul
-                className="RecentTrack__info">
-                {/* <li>{artist}</li>
-                <li>{album}</li> */}
-              </ul>
-            </a>
-          </li>
-        </ul>
+      <ul
+        className="RecentTrack">
+        <li
+          className="RecentTrack_item">
+          <a href="">
+            <img src={url} />
+            <ul
+              className="RecentTrack__info">
+              <li>{name}</li>
+            </ul>
+          </a>
+        </li>
+      </ul>
     );
   }
 });

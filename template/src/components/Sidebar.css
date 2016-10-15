@@ -5,10 +5,17 @@
 }
 
 .Sidebar {
-  position: fixed;
-  right: 20px;
-  width: auto;
-  text-align: right;
-  background-color: grey;
-  color: white;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 860px) {
+  .Sidebar {
+    position: fixed;
+    right: 20px;
+    width: auto;
+    text-align: right;
+  }
 }

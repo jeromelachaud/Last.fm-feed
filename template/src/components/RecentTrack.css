@@ -1,21 +1,21 @@
 /* List */
-.RecentTrack__item {
+.RecentTrack {
   margin-bottom: 5rem;
 }
 
-.RecentTrack__item a:link,
-.RecentTrack__item a:visited {
+.RecentTrack a:link,
+.RecentTrack a:visited {
   color: #111111;
   display: block;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.RecentTrack__item a:active {
+.RecentTrack a:active {
   color: lime;
   text-decoration: none;
 }
 
-.RecentTrack__item a:hover {
+.RecentTrack a:hover {
   background-color: rgba(255, 255, 255, 1);
   -webkit-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
