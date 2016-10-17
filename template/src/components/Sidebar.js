@@ -10,9 +10,8 @@ let Sidebar = React.createClass ({
   render() {
 
     const {
-      name,
-      playcount
-    } = this.props.user;
+      user
+    } = this.props;
 
     return (
       <div
@@ -20,8 +19,7 @@ let Sidebar = React.createClass ({
         <img src={logo} className="Logo" alt="logo" />
         <Menu />
         <User
-          name={name}
-          playcount={playcount} />
+          user={user} />
       </div>
     );
   }
