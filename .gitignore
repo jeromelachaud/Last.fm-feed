@@ -3,3 +3,4 @@ build
 .DS_Store
 *.tgz
 my-app*
+npm-debug.log
