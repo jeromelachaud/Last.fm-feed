@@ -21,7 +21,6 @@
 .User__info li,
 .User__info a, {
   color:#fff;
-  text-align: right;
 }
 
 .User__info a:hover, {
