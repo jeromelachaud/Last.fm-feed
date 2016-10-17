@@ -8,11 +8,3 @@ ReactDOM.render(
   <App />,
   document.getElementById('root')
 );
-
-// Background generation
-// const pattern = GeoPattern.generate('lastFmActivities', {
-//   color: '#B90000',
-//   generator: 'plusSigns'
-// });
-// let backgroundImg = pattern.toDataUrl();
-// document.body.style.backgroundImage = backgroundImg;
