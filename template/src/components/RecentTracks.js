@@ -6,15 +6,16 @@ import _map from 'lodash/map';
 let RecentTracks = React.createClass ({
 
   render() {
-    const recentTracks = this.props.recentTracks;
+    const {
+      recentTracks
+    } = this.props;
 
     let RecentTrackElement;
     if (recentTracks) {
-      RecentTrackElement = _map(recentTracks, (name,url, i) => (
+      RecentTrackElement = _map(recentTracks, (recentTrack, i) => (
         <RecentTrack
-          url={url}
           key={i}
-          name={name} />
+          recentTrack={recentTrack} />
       ));
     }
 
