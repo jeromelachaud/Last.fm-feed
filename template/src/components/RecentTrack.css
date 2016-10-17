@@ -11,7 +11,6 @@
 }
 
 .RecentTrack a:active {
-  color: lime;
   text-decoration: none;
 }
 
@@ -26,5 +25,6 @@
   width: 300px;
 }
 
-.date {
-  font-size: 80%; }
+.RecentTrack__date {
+  font-size: 80%;
+}
