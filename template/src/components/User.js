@@ -13,7 +13,8 @@ let User = React.createClass ({
       name,
       playcount,
       registered,
-      image
+      image,
+      url
     } = user;
 
     let imageElement;
@@ -31,16 +32,19 @@ let User = React.createClass ({
     return (
       <div
         className="User">
-        <div
-          className="RecentTrack__image">
-          {imageElement}
-        </div>
-        <ul
-          className="User__info">
-          <li>{name}</li>
-          <li>{playcount}</li>
+        <a
+          className="User__link"
+          href={url} target="blanck">
+          <div>
+            {imageElement}
+          </div>
+          <ul
+            className="User__info">
+            <li>{name}</li>
+            <li>{playcount}</li>
             <li>{registeredElement}</li>
-        </ul>
+          </ul>
+        </a>
       </div>
     );
   }

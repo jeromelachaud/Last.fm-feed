@@ -1,9 +1,15 @@
 /* Usercard */
 .User {
-  font-size: 2rem;
+  display: inline-block;
   width: 25rem;
   margin: 5px auto;
+  font-size: 2rem;
+}
+
+.User__link {
+  display: inherit;;
   color: #fff;
+  background-color: rgba(255,255,255,0.4);
 }
 
 @media screen and (min-width: 860px) {
@@ -16,15 +22,6 @@
 .User__info {
   margin: 0 auto;
   padding: 1rem 0.7rem 0.7rem 0;
-}
-
-.User__info li,
-.User__info a, {
-  color:#fff;
-}
-
-.User__info a:hover, {
-  background-color: rgba(255,255,255,0.4);
 }
 
 .User__info li span{
