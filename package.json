@@ -63,6 +63,7 @@
     "bundle-deps": "^1.0.0",
     "geopattern": "^1.2.3",
     "lodash": "^4.16.4",
+    "moment": "^2.15.1",
     "react": "^15.2.1",
     "react-dom": "^15.2.1"
   },

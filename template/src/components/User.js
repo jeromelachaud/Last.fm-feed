@@ -1,5 +1,6 @@
 import React from 'react';
 import './User.css';
+import moment from 'moment';
 
 let User = React.createClass ({
 
@@ -24,10 +25,9 @@ let User = React.createClass ({
 
     let registeredElement;
     if (registered) {
-      registeredElement = (
-        <li>{registered['#text']}</li>
-      );
+      registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
     }
+
     return (
       <div
         className="User">
@@ -39,7 +39,7 @@ let User = React.createClass ({
           className="User__info">
           <li>{name}</li>
           <li>{playcount}</li>
-          {registeredElement}
+            <li>{registeredElement}</li>
         </ul>
       </div>
     );
