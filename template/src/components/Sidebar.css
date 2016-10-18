@@ -6,16 +6,17 @@
 
 .Sidebar {
   width: 100%;
-  text-align: center;
   position: relative;
   padding-bottom: 3rem;
+  text-align: center;
+  font-weight: 800;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 990px) {
   .Sidebar {
+    width: auto;
     position: fixed;
     right: 20px;
-    width: auto;
     text-align: right;
   }
 }
