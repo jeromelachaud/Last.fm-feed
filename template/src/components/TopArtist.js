@@ -10,7 +10,8 @@ let TopArtist = React.createClass ({
 
     const {
       artist,
-      image
+      image,
+      url
     } = topArtist;
 
     return (
@@ -18,7 +19,7 @@ let TopArtist = React.createClass ({
         className="TopArtist">
         <li
           className="TopArtist_item">
-          <a href={topArtist.url}>
+          <a href={url}>
             <img src={image['3']['#text']} />
             <ul
               className="TopArtist__info">

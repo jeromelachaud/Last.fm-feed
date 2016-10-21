@@ -1,7 +1,6 @@
 /* Usercard */
 .User {
   display: inline-block;
-  width: 25rem;
   margin: 5px auto;
   font-size: 2rem;
 }
@@ -10,13 +9,6 @@
   display: inherit;;
   color: #fff;
   background-color: rgba(255,255,255,0.4);
-}
-
-@media screen and (min-width: 860px) {
-  .User {
-    width: auto;
-    border: 0;
-  }
 }
 
 .User__info {

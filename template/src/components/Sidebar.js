@@ -12,7 +12,6 @@ let Sidebar = React.createClass ({
       user
     } = this.props;
 
-
     return (
       <div
         className="Sidebar">

@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Link
+} from 'react-router';
 import './Menu.css';
 import User from './User';
 
@@ -19,33 +22,16 @@ let Menu = React.createClass ({
       <div>
         <ul>
           <li>
-            <a
-              href="#0"
-              className="Menu__item">
-              Latest track
-            </a>
+            <Link to="/recent-tracks" className="Menu__item">Latest track</Link>
           </li>
           <li>
-            <a
-              href="#0"
-              className="Menu__item">
-              Top artist
-            </a>
+            <a href="/top-artists" className="Menu__item">Top artists</a>
           </li>
           <li>
-            <a
-              href="#0"
-              className="Menu__item">
-              Charts
-            </a>
+            <a href="#0" className="Menu__item">Charts</a>
           </li>
           <li>
-            <a
-              href="#0"
-              className="Menu__item"
-              onClick={this.handleClick}>
-              User infos
-            </a>
+            <a href="/" className="Menu__item" onClick={this.handleClick}>User infos</a>
           </li>
         </ul>
         <User
