@@ -8,7 +8,6 @@ import {
 import App from './App';
 import RecentTracks from './components/RecentTracks';
 import TopArtists from './components/TopArtists';
-import './index.css';
 
 let AppRouter = React.createClass ({
 
@@ -17,8 +16,8 @@ let AppRouter = React.createClass ({
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={RecentTracks}/>
-          <Route path="recenttracks" component={RecentTracks} />
-          <Route path="topartists" component={TopArtists} />
+          <Route path="/recent-tracks" component={RecentTracks} />
+          <Route path="/top-artists" component={TopArtists} />
         </Route>
       </Router>
     );

@@ -30,13 +30,9 @@ let TopArtists = React.createClass ({
     getTopArtists()
     .then((topArtists) => {
       this.setState({
-        topArtists: topArtists.data.artist
+        topArtists: topArtists.data.topartists.artist
       });
     });
-  },
-
-  componentWillUnmount: function() {
-    this.serverRequest.abort();
   },
 
   render() {
@@ -45,16 +41,18 @@ let TopArtists = React.createClass ({
     } = this.state;
 
     let TopArtistElement;
+    if (topArtists) {
       TopArtistElement = _map(topArtists, (topArtist, i) => (
         <TopArtist
           key={i}
           topArtist={topArtist} />
       ));
+    }
 
     return (
     <section
       className="TopArtists">
-      TopArtists
+      TopArtistElement
       {TopArtistElement}
     </section>
     );

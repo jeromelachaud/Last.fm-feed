@@ -35,10 +35,6 @@ let RecentTracks = React.createClass ({
     });
   },
 
-  componentWillUnmount: function() {
-    this.serverRequest.abort();
-  },
-
   render() {
     const {
       recentTracks

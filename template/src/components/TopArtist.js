@@ -9,7 +9,8 @@ let TopArtist = React.createClass ({
     } = this.props;
 
     const {
-      artist,
+      name,
+      playcount,
       image,
       url
     } = topArtist;
@@ -23,8 +24,8 @@ let TopArtist = React.createClass ({
             <img src={image['3']['#text']} />
             <ul
               className="TopArtist__info">
-              <li><strong>{artist['#text']}</strong></li>
-              <li>{topArtist.name}</li>
+              <li><strong>{name}</strong></li>
+              <li><i>{playcount} plays</i></li>
             </ul>
           </a>
         </li>

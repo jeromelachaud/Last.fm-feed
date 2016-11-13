@@ -45,15 +45,15 @@ let App = React.createClass ({
       <div className="App">
         <Sidebar
           user={user} />
-          {this.props.children}
+        {this.props.children}
       </div>
     );
   }
 });
 
-export default App;
-
 App.propTypes = {
   state: React.PropTypes.shape({}),
   children: React.PropTypes.node.isRequired
 };
+
+export default App;
