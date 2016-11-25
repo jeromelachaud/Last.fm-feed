@@ -45,7 +45,7 @@ let Menu = React.createClass ({
             <a href="#0" className="Menu__item">Charts</a>
           </li>
           <li>
-            <a href="#0" className="Menu__item" onClick={this.onClick}>User infos</a>
+            <Link className="Menu__item" onClick={this.onClick}>User infos</Link>
           </li>
         </ul>
         {this.state.showResults ? userElement : null}
