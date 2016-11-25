@@ -29,9 +29,7 @@ let App = React.createClass ({
     });
     getUserInfo()
     .then((user) => {
-      this.setState({
-        user: user.data.user
-      });
+      this.setState({ user } = user.data);
     });
   },
 
