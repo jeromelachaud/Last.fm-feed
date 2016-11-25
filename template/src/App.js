@@ -15,7 +15,7 @@ const {
 
 let App = React.createClass ({
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       user: []
     };
@@ -33,7 +33,7 @@ let App = React.createClass ({
     });
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     this.serverRequest.abort();
   },
 
