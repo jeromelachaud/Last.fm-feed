@@ -25,12 +25,15 @@ let App = React.createClass ({
 
   render() {
     let user = this.state.user;
-    let recentTracks = this.state.recentTracks;
+
+    const appState = this.state;
+    const appElement = React.cloneElement(this.props.children, { ...appState });
+
     return (
       <div className="App">
         <Sidebar
           user={user} />
-        {this.props.children}
+        {appElement}
       </div>
     );
   }
