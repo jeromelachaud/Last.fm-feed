@@ -1,36 +1,22 @@
 import React from 'react';
+import store from './stores/store';
 import Sidebar from './components/Sidebar';
 import './App.css';
-import axios from 'axios';
-
 import {
-  apiConstants
-} from './constants/constants';
-const {
-  baseURL,
-  apiKey,
-  userName,
-  getMethod
-} = apiConstants;
+  fetchUser,
+  fetchRecentTracks
+} from './actions/actions';
 
 let App = React.createClass ({
 
-  getInitialState() {
-    return {
-      user: []
-    };
+  componentWillMount() {
+    this.setState(store.getState());
+    fetchUser();
+    fetchRecentTracks();
   },
 
   componentDidMount() {
-    let getUserInfo = axios.create({
-      getMethod,
-      baseURL,
-      url: `?format=json&method=user.getinfo&user=${userName}&api_key=${apiKey}`
-    });
-    getUserInfo()
-    .then((user) => {
-      this.setState({ user } = user.data);
-    });
+    store.addChangeListener(() => this.setState(store.getState()));
   },
 
   componentWillUnmount() {
@@ -39,6 +25,7 @@ let App = React.createClass ({
 
   render() {
     let user = this.state.user;
+    let recentTracks = this.state.recentTracks;
     return (
       <div className="App">
         <Sidebar

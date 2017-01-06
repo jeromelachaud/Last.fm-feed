@@ -8,15 +8,15 @@ import User from './User';
 let Menu = React.createClass ({
 
   getInitialState() {
-    return { showResults: false };
+    return { showUser: false };
   },
 
   onClick(e) {
     e.preventDefault(e);
-    if (this.state.showResults === false) {
-      this.setState({showResults : true});
+    if (this.state.showUser === false) {
+      this.setState({showUser : true});
     } else {
-      this.setState({showResults : false});
+      this.setState({showUser : false});
     }
   },
 
@@ -36,19 +36,19 @@ let Menu = React.createClass ({
       <div>
         <ul>
           <li>
-            <Link to="recent-tracks" className="Menu__item">Latest track</Link>
+            <Link to="recent-tracks" className="Menu__item">Latest Tracks</Link>
           </li>
           <li>
-            <Link to="top-artists" className="Menu__item">Top artists</Link>
+            <Link to="top-artists" className="Menu__item">Top Artists</Link>
           </li>
           <li>
             <a href="#0" className="Menu__item">Charts</a>
           </li>
           <li>
-            <Link className="Menu__item" onClick={this.onClick}>User infos</Link>
+            <Link className="Menu__item" onClick={this.onClick}>User Infos</Link>
           </li>
         </ul>
-        {this.state.showResults ? userElement : null}
+        {this.state.showUser ? userElement : null}
       </div>
     );
   }

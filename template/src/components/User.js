@@ -17,10 +17,7 @@ let User = React.createClass ({
       url
     } = user;
 
-    let registeredElement;
-    if (registered) {
-      registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
-    }
+    const registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
 
     return (
       <div
@@ -29,7 +26,7 @@ let User = React.createClass ({
           className="User__link"
           href={url} target="blanck">
           <div>
-            <img src={image['3']['#text']} />
+            <img src={image[3]['#text']} />
           </div>
           <ul
             className="User__info">
@@ -42,5 +39,9 @@ let User = React.createClass ({
     );
   }
 });
+
+User.propTypes = {
+  user: React.PropTypes.shape({})
+};
 
 export default User;
