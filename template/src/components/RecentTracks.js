@@ -6,7 +6,6 @@ import _map from 'lodash/map';
 let RecentTracks = React.createClass ({
 
   render() {
-    debugger;
 
     const {
       recentTracks
