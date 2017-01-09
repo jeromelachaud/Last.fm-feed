@@ -42,9 +42,6 @@ let Menu = React.createClass ({
             <Link to="top-artists" className="Menu__item">Top Artists</Link>
           </li>
           <li>
-            <a href="#0" className="Menu__item">Charts</a>
-          </li>
-          <li>
             <Link className="Menu__item" onClick={this.onClick}>User Infos</Link>
           </li>
         </ul>
