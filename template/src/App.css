@@ -17,6 +17,8 @@ html {
   font-size: 62.5%; }
 
 body {
+  margin: 0;
+  padding: 0;
   font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: grey;
   background-color: #9c0000;
