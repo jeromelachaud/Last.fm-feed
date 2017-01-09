@@ -42,3 +42,18 @@ export function fetchRecentTracks() {
     });
   });
 }
+
+export function fetchTopArtists() {
+  let getTopArtists = axios.create({
+    getMethod,
+    baseURL,
+    url: `?format=json&method=user.gettopartists&user=${userName}&api_key=${apiKey}`
+  });
+  getTopArtists()
+  .then((response) => {
+    dispatcher.dispatch({
+      type: actionType.topArtistsRetreived,
+      topArtists: response.data.topartists.artist
+    });
+  });
+}

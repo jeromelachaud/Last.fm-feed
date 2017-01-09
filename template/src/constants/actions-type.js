@@ -1,4 +1,5 @@
 export default {
   userRetrieved: 'userRetrieved',
-  recentTracksRetreived: 'recentTracksRetreived'
+  recentTracksRetreived: 'recentTracksRetreived',
+  topArtistsRetreived: 'topArtistsRetreived'
 };

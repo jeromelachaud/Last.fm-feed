@@ -4,7 +4,8 @@ import dispatcher from '../dispatcher/dispatcher';
 const CHANGE_EVENT = 'change';
 const state = {
   user:{},
-  recentTracks: {}
+  recentTracks: {},
+  topArtists: {}
 };
 
 class Store extends EventEmitter {
@@ -27,7 +28,8 @@ class Store extends EventEmitter {
 
 const store = new Store({
   user:{},
-  recentTracks: {}
+  recentTracks: {},
+  topArtists: {}
 });
 
 export default store;
@@ -41,6 +43,11 @@ dispatcher.register(function(action) {
 
     case 'recentTracksRetreived':
       state.recentTracks = action.recentTracks;
+      store.emitChange();
+      break;
+
+    case 'topArtistsRetreived':
+      state.topArtists = action.topArtists;
       store.emitChange();
       break;
 

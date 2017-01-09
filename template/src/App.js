@@ -4,7 +4,8 @@ import Sidebar from './components/Sidebar';
 import './App.css';
 import {
   fetchUser,
-  fetchRecentTracks
+  fetchRecentTracks,
+  fetchTopArtists
 } from './actions/actions';
 
 let App = React.createClass ({
@@ -13,6 +14,7 @@ let App = React.createClass ({
     this.setState(store.getState());
     fetchUser();
     fetchRecentTracks();
+    fetchTopArtists();
   },
 
   componentDidMount() {
