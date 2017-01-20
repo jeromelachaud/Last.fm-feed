@@ -11,7 +11,6 @@ let RecentTracks = React.createClass ({
       recentTracks
     } = this.props;
 
-
     let RecentTrackElement;
     if (recentTracks) {
       RecentTrackElement = _map(recentTracks, (recentTrack, i) => (
