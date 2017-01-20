@@ -34,7 +34,7 @@ const store = new Store({
 
 export default store;
 
-dispatcher.register(function(action) {
+dispatcher.register((action) => {
   switch (action.type) {
     case 'userRetrieved':
       state.user = action.user;
