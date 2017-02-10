@@ -34,11 +34,46 @@ const store = new Store({
 
 export default store;
 
+export function handleUserRetrieved(state, action) {
+  if (!action.user) {
+    throw new Error('No user');
+  }
+
+  state.user = action.user;
+  store.emitChange();
+  return state;
+}
+
+// it('should add the user to the state', function() {
+//   var newState = handleUserRetrieved({}, { user: whatever });
+//
+//   expect(newState.user)
+//     .toBe(whatever)
+// })
+
+// var handlers = {
+//   userRetrieved: function(state, action) {
+//     if (!action.user) {
+//       throw new Error('No user');
+//     }
+//
+//     state.user = action.user;
+//     store.emitChange();
+//     return state;
+//   },
+//
+//   recentTracksRetreived: function(state, action) {
+//
+//   }
+// }
+
 dispatcher.register((action) => {
+
+  // handles[action.type](state, action);
+
   switch (action.type) {
     case 'userRetrieved':
-      state.user = action.user;
-      store.emitChange();
+      handleUserRetrieved(state, action);
       break;
 
     case 'recentTracksRetreived':
