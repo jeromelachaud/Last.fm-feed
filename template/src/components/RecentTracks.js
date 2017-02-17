@@ -2,8 +2,15 @@ import React from 'react';
 import './RecentTracks.css';
 import RecentTrack from './RecentTrack.js';
 import _map from 'lodash/map';
+import {
+  fetchRecentTracks
+} from '../actions/actions';
 
 let RecentTracks = React.createClass ({
+
+  componentWillMount() {
+    fetchRecentTracks();
+  },
 
   render() {
 
