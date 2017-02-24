@@ -44,6 +44,27 @@ export function handleUserRetrieved(state, action) {
   return state;
 }
 
+export function recentTracksRetreived(state, action) {
+  if (!action.recentTracks) {
+    throw new Error('No recent tracks');
+  }
+
+  state.recentTracks = action.recentTracks;
+  store.emitChange();
+  return state;
+}
+
+
+export function topArtistsRetreived(state, action) {
+  if (!action.topArtists) {
+    throw new Error('No top artists');
+  }
+
+  state.topArtists = action.topArtists;
+  store.emitChange();
+  return state;
+}
+
 // it('should add the user to the state', function() {
 //   var newState = handleUserRetrieved({}, { user: whatever });
 //
@@ -77,13 +98,11 @@ dispatcher.register((action) => {
       break;
 
     case 'recentTracksRetreived':
-      state.recentTracks = action.recentTracks;
-      store.emitChange();
+      recentTracksRetreived(state, action);
       break;
 
     case 'topArtistsRetreived':
-      state.topArtists = action.topArtists;
-      store.emitChange();
+      topArtistsRetreived(state, action);
       break;
 
     default:
