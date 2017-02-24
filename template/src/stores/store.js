@@ -35,7 +35,6 @@ const store = new Store({
 export default store;
 
 var handlers = {
-
   userRetrieved: function(state, action) {
     if (!action.user) {
       throw new Error('No user');
@@ -68,7 +67,5 @@ var handlers = {
 };
 
 dispatcher.register((action) => {
-
   handlers[action.type](state, action);
-
 });
