@@ -2,12 +2,14 @@ import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher/dispatcher';
 
 const CHANGE_EVENT = 'change';
-const state = {
+// const states = [];
+let state = {
   user:{},
   recentTracks: {},
   topArtists: {}
 };
 
+// states.push(state);
 class Store extends EventEmitter {
   emitChange() {
     this.emit(CHANGE_EVENT);
@@ -65,5 +67,6 @@ var handlers = {
 
 dispatcher.register((action) => {
   state = handlers[action.type](state, action);
+  // states.push(state);
   store.emitChange();
 });
