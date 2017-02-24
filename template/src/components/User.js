@@ -1,8 +1,16 @@
 import React from 'react';
 import './User.css';
 import moment from 'moment';
+import {
+  fetchUser
+} from '../actions/actions';
+
 
 let User = React.createClass ({
+
+  componentWillMount() {
+    fetchUser();
+  },
 
   render() {
     const {

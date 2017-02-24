@@ -2,16 +2,12 @@ import React from 'react';
 import store from './stores/store';
 import Sidebar from './components/Sidebar';
 import './App.css';
-import {
-  fetchUser
-} from './actions/actions';
 
 let App = React.createClass ({
 
   // fetch the data  in each components
   componentWillMount() {
     this.setState(store.getState());
-    fetchUser();
   },
 
   componentDidMount() {
