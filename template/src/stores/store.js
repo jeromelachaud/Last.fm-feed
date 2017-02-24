@@ -41,7 +41,6 @@ var handlers = {
     }
 
     state.user = action.user;
-    store.emitChange();
     return state;
   },
 
@@ -51,7 +50,6 @@ var handlers = {
     }
 
     state.recentTracks = action.recentTracks;
-    store.emitChange();
     return state;
   },
 
@@ -61,11 +59,11 @@ var handlers = {
     }
 
     state.topArtists = action.topArtists;
-    store.emitChange();
     return state;
   }
 };
 
 dispatcher.register((action) => {
-  handlers[action.type](state, action);
+  state = handlers[action.type](state, action);
+  store.emitChange();
 });
