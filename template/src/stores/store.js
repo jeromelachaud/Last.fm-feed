@@ -65,13 +65,6 @@ export function topArtistsRetreived(state, action) {
   return state;
 }
 
-// it('should add the user to the state', function() {
-//   var newState = handleUserRetrieved({}, { user: whatever });
-//
-//   expect(newState.user)
-//     .toBe(whatever)
-// })
-
 // var handlers = {
 //   userRetrieved: function(state, action) {
 //     if (!action.user) {
