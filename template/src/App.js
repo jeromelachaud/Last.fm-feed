@@ -3,8 +3,7 @@ import store from './stores/store';
 import Sidebar from './components/Sidebar';
 import './App.css';
 import {
-  fetchUser,
-  fetchTopArtists
+  fetchUser
 } from './actions/actions';
 
 let App = React.createClass ({
@@ -13,7 +12,6 @@ let App = React.createClass ({
   componentWillMount() {
     this.setState(store.getState());
     fetchUser();
-    fetchTopArtists();
   },
 
   componentDidMount() {
