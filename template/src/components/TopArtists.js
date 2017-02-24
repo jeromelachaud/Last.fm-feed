@@ -29,7 +29,6 @@ let TopArtists = React.createClass ({
     return (
     <section
       className="TopArtists">
-      TopArtistElement
       {TopArtistElement}
     </section>
     );
