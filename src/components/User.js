@@ -25,7 +25,15 @@ let User = React.createClass ({
       url
     } = user;
 
-    const registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
+    let registeredElement;
+    if (user.registered) {
+      registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
+    }
+
+    let imageElement;
+    if (user.image) {
+      imageElement = image[3]['#text'];
+    }
 
     return (
       <div
@@ -34,7 +42,7 @@ let User = React.createClass ({
           className="User__link"
           href={url} target="blanck">
           <div>
-            <img src={image[3]['#text']} />
+            <img src={imageElement} />
           </div>
           <ul
             className="User__info">
