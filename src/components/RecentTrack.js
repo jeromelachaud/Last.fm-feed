@@ -28,7 +28,9 @@ let RecentTrack = React.createClass ({
         <li
           className="RecentTrack_item">
           <a href={recentTrack.url}>
-            <img src={image['3']['#text']} />
+            <img 
+              src={image['3']['#text']} 
+              alt={recentTrack.name} />
             <ul
               className="RecentTrack__info">
               <li><strong>{artist['#text']}</strong></li>

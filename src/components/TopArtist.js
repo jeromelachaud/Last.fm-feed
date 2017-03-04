@@ -21,7 +21,9 @@ let TopArtist = React.createClass ({
         <li
           className="TopArtist_item">
           <a href={url}>
-            <img src={image['3']['#text']} />
+            <img 
+              src={image['3']['#text']} 
+              alt={topArtist.name}/>
             <ul
               className="TopArtist__info">
               <li><strong>{name}</strong></li>
