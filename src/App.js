@@ -5,7 +5,6 @@ import './App.css';
 
 let App = React.createClass ({
 
-  // fetch the data  in each components
   componentWillMount() {
     this.setState(store.getState());
   },
