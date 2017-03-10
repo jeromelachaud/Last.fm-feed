@@ -3,7 +3,7 @@ import './User.css';
 import moment from 'moment';
 import {
   fetchUser
-} from '../actions/actions';
+} from '../actions/action-creators';
 
 
 let User = React.createClass ({
@@ -42,8 +42,8 @@ let User = React.createClass ({
           className="User__link"
           href={url} target="blanck">
           <div>
-            <img 
-              src={imageElement} 
+            <img
+              src={imageElement}
               alt={user.name} />
           </div>
           <ul

@@ -4,7 +4,7 @@ import TopArtist from './TopArtist.js';
 import _map from 'lodash/map';
 import {
   fetchTopArtists
-} from '../actions/actions';
+} from '../actions/action-creators';
 
 let TopArtists = React.createClass ({
 

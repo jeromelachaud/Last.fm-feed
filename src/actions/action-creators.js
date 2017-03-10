@@ -1,5 +1,5 @@
 import dispatcher from '../dispatcher/dispatcher';
-import actionTypes from '../constants/actions-types';
+import actionTypes from '../constants/action-types';
 
 import axios from 'axios';
 import {

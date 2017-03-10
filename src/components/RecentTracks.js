@@ -4,7 +4,7 @@ import RecentTrack from './RecentTrack.js';
 import _map from 'lodash/map';
 import {
   fetchRecentTracks
-} from '../actions/actions';
+} from '../actions/action-creators';
 
 let RecentTracks = React.createClass ({
 
