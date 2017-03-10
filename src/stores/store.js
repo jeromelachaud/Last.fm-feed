@@ -42,8 +42,10 @@ var handlers = {
       throw new Error('No user');
     }
 
-    state.user = action.user;
-    return state;
+    return {
+      ...state,
+      user: action.user
+    };
   },
 
   recentTracksRetreived: function(state, action) {
@@ -51,8 +53,10 @@ var handlers = {
       throw new Error('No recent tracks');
     }
 
-    state.recentTracks = action.recentTracks;
-    return state;
+    return {
+      ...state,
+      recentTracks: action.recentTracks
+    };
   },
 
   topArtistsRetreived: function(state, action) {
@@ -60,8 +64,10 @@ var handlers = {
       throw new Error('No top artists');
     }
 
-    state.topArtists = action.topArtists;
-    return state;
+    return {
+      ...state,
+      topArtists: action.topArtists
+    };
   }
 };
 
