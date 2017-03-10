@@ -1,5 +1,5 @@
 import dispatcher from '../dispatcher/dispatcher';
-import actionType from '../constants/actions-type';
+import actionTypes from '../constants/actions-types';
 
 import axios from 'axios';
 import {
@@ -22,7 +22,7 @@ export function fetchUser() {
   getUserInfo()
   .then((response) => {
     dispatcher.dispatch({
-      type: actionType.userRetrieved,
+      type: actionTypes.userRetrieved,
       user: response.data.user
     });
   });
@@ -37,7 +37,7 @@ export function fetchRecentTracks() {
   getRecentTracks()
   .then((response) => {
     dispatcher.dispatch({
-      type: actionType.recentTracksRetreived,
+      type: actionTypes.recentTracksRetreived,
       recentTracks: response.data.recenttracks.track
     });
   });
@@ -52,7 +52,7 @@ export function fetchTopArtists() {
   getTopArtists()
   .then((response) => {
     dispatcher.dispatch({
-      type: actionType.topArtistsRetreived,
+      type: actionTypes.topArtistsRetreived,
       topArtists: response.data.topartists.artist
     });
   });
