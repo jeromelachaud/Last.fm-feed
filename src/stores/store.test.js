@@ -1,4 +1,3 @@
-// import actionTypes from '../constants/action-types';
 import {
   handlers
 } from './store';
