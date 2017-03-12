@@ -4,6 +4,9 @@ import {
 } from 'react-router';
 import './Menu.css';
 import User from './User';
+import language from '../language/language';
+
+const menuLanguage = language.components.menu;
 
 let Menu = React.createClass ({
 
@@ -36,13 +39,13 @@ let Menu = React.createClass ({
       <div>
         <ul>
           <li>
-            <Link to="recent-tracks" className="Menu__item">Latest Tracks</Link>
+            <Link to="recent-tracks" className="Menu__item">{menuLanguage.recentTracks}</Link>
           </li>
           <li>
-            <Link to="top-artists" className="Menu__item">Top Artists</Link>
+            <Link to="top-artists" className="Menu__item">{menuLanguage.topArtists}</Link>
           </li>
           <li>
-            <Link className="Menu__item" onClick={this.onClick}>User Infos</Link>
+            <Link className="Menu__item" onClick={this.onClick}>{menuLanguage.userInfo}</Link>
           </li>
         </ul>
         {this.state.showUser ? userElement : null}
