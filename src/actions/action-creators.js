@@ -8,14 +8,12 @@ import {
 const {
   baseURL,
   apiKey,
-  userName,
-  getMethod
+  userName
 } = apiConstants;
 
 
 export function fetchUser() {
   let getUserInfo = axios.create({
-    getMethod,
     baseURL,
     url: `?format=json&method=user.getinfo&user=${userName}&api_key=${apiKey}`
   });
@@ -30,7 +28,6 @@ export function fetchUser() {
 
 export function fetchRecentTracks() {
   let getRecentTracks = axios.create({
-    getMethod,
     baseURL,
     url: `?format=json&method=user.getrecenttracks&user=${userName}&api_key=${apiKey}`
   });
@@ -45,7 +42,6 @@ export function fetchRecentTracks() {
 
 export function fetchTopArtists() {
   let getTopArtists = axios.create({
-    getMethod,
     baseURL,
     url: `?format=json&method=user.gettopartists&user=${userName}&api_key=${apiKey}`
   });
