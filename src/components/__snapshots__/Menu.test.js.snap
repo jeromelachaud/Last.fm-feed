@@ -1,0 +1,33 @@
+exports[`Menu componemts Menu component should render as expected 1`] = `
+<div>
+  <ul>
+    <li>
+      <Link
+        className="Menu__item"
+        onlyActiveOnIndex={false}
+        style={Object {}}
+        to="recent-tracks">
+        Recent Tracks
+      </Link>
+    </li>
+    <li>
+      <Link
+        className="Menu__item"
+        onlyActiveOnIndex={false}
+        style={Object {}}
+        to="top-artists">
+        Top Artists
+      </Link>
+    </li>
+    <li>
+      <Link
+        className="Menu__item"
+        onClick={[Function]}
+        onlyActiveOnIndex={false}
+        style={Object {}}>
+        User Info
+      </Link>
+    </li>
+  </ul>
+</div>
+`;
