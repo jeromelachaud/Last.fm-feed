@@ -6,8 +6,9 @@ import toJson from 'enzyme-to-json';
 import Menu from './Menu';
 
 describe('Menu componemts', () => {
-  it('Menu component should render as expected', () => {
-    const menuComponent = shallow(<Menu />);
+  const menuComponent = shallow(<Menu />);
+
+  it('should render as expected', () => {
     expect(toJson(menuComponent)).toMatchSnapshot();
   });
 });
