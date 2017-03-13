@@ -4,7 +4,7 @@ import actionTypes from '../constants/action-types';
 import axios from 'axios';
 import {
   apiConstants
-} from '../constants/constants';
+} from '../constants/api-constants';
 const {
   baseURL,
   apiKey,
