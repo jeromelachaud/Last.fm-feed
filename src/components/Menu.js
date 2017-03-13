@@ -39,13 +39,25 @@ let Menu = React.createClass ({
       <div>
         <ul>
           <li>
-            <Link to="recent-tracks" className="Menu__item">{menuLanguage.recentTracks}</Link>
+            <Link
+              to="recent-tracks"
+              className="Menu__item">
+              {menuLanguage.recentTracks}
+            </Link>
           </li>
           <li>
-            <Link to="top-artists" className="Menu__item">{menuLanguage.topArtists}</Link>
+            <Link
+              to="top-artists"
+              className="Menu__item">
+              {menuLanguage.topArtists}
+            </Link>
           </li>
           <li>
-            <Link className="Menu__item" onClick={this.onClick}>{menuLanguage.userInfo}</Link>
+            <Link
+              className="Menu__item"
+              onClick={this.onClick}>
+              {menuLanguage.userInfo}
+            </Link>
           </li>
         </ul>
         {this.state.showUser ? userElement : null}
