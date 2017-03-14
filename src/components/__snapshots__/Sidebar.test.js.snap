@@ -1,0 +1,10 @@
+exports[`Sidebar componemts should render as expected 1`] = `
+<div
+  className="Sidebar">
+  <img
+    alt="logo"
+    className="Logo"
+    src="logo.svg" />
+  <Menu />
+</div>
+`;
