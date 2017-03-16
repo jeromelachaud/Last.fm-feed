@@ -1,5 +1,5 @@
 import React from 'react';
-import store from './stores/store';
+import store from './stores/lastfm-store';
 import Sidebar from './components/Sidebar';
 import './App.css';
 

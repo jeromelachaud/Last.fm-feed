@@ -1,6 +1,6 @@
 import {
   handlers
-} from './store';
+} from './lastfm-store';
 
 describe('LastFm activities actions handlers', () => {
 
