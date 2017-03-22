@@ -54,7 +54,7 @@ let Menu = React.createClass ({
           <li
             className="Menu__item">
             <Link
-              to="#0"
+              id="toggleUser"
               onClick={this.toggleUser}>
               {menuLanguage.userInfo}
             </Link>
