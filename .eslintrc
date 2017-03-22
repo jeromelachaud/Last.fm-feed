@@ -30,7 +30,7 @@
     "react/prop-types": 1,
     "react/wrap-multilines": 1,
     "react/jsx-uses-react": 1,
-    "keyword-spacing": [2, {before: true, after: true}],
+    "keyword-spacing": [2, {"before": true, "after": true}],
     "strict": 0,
     "new-cap": 0,
     "comma-dangle": 2,
