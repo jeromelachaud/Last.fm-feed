@@ -1,4 +1,4 @@
-exports[`Sidebar componemts should render as expected 1`] = `
+exports[`<Sidebar /> componemts should render as expected 1`] = `
 <div
   className="Sidebar">
   <img
