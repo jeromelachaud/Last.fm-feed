@@ -38,23 +38,24 @@ let Menu = React.createClass ({
     return (
       <div>
         <ul>
-          <li>
+          <li
+            className="Menu__item">
             <Link
-              to="recent-tracks"
-              className="Menu__item">
+              to="recent-tracks">
               {menuLanguage.recentTracks}
             </Link>
           </li>
-          <li>
+          <li
+            className="Menu__item">
             <Link
-              to="top-artists"
-              className="Menu__item">
+              to="top-artists">
               {menuLanguage.topArtists}
             </Link>
           </li>
-          <li>
+          <li
+            className="Menu__item">
             <Link
-              className="Menu__item"
+              to="#0"
               onClick={this.toggleUser}>
               {menuLanguage.userInfo}
             </Link>
