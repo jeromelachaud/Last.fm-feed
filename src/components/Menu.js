@@ -16,7 +16,7 @@ let Menu = React.createClass ({
 
   onClick(e) {
     e.preventDefault(e);
-    if (this.state.showUser === false) {
+    if (!this.state.showUser) {
       this.setState({showUser : true});
     } else {
       this.setState({showUser : false});
