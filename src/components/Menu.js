@@ -14,8 +14,7 @@ let Menu = React.createClass ({
     return { showUser: false };
   },
 
-  toggleUser(e) {
-    e.preventDefault(e);
+  toggleUser() {
     if (!this.state.showUser) {
       this.setState({showUser : true});
     } else {
