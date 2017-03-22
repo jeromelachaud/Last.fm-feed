@@ -14,7 +14,7 @@ let Menu = React.createClass ({
     return { showUser: false };
   },
 
-  onClick(e) {
+  toggleUser(e) {
     e.preventDefault(e);
     if (!this.state.showUser) {
       this.setState({showUser : true});
@@ -55,7 +55,7 @@ let Menu = React.createClass ({
           <li>
             <Link
               className="Menu__item"
-              onClick={this.onClick}>
+              onClick={this.toggleUser}>
               {menuLanguage.userInfo}
             </Link>
           </li>
