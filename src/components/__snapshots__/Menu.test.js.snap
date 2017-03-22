@@ -1,27 +1,28 @@
-exports[`Menu componemts should render as expected 1`] = `
+exports[`<Menu /> componemts should render as expected 1`] = `
 <div>
   <ul>
-    <li>
+    <li
+      className="Menu__item">
       <Link
-        className="Menu__item"
         onlyActiveOnIndex={false}
         style={Object {}}
         to="recent-tracks">
         Recent Tracks
       </Link>
     </li>
-    <li>
+    <li
+      className="Menu__item">
       <Link
-        className="Menu__item"
         onlyActiveOnIndex={false}
         style={Object {}}
         to="top-artists">
         Top Artists
       </Link>
     </li>
-    <li>
+    <li
+      className="Menu__item">
       <Link
-        className="Menu__item"
+        id="toggleUser"
         onClick={[Function]}
         onlyActiveOnIndex={false}
         style={Object {}}>
