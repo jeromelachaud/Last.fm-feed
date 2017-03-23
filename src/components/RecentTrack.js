@@ -15,6 +15,13 @@ let RecentTrack = React.createClass ({
       image
     } = recentTrack;
 
+    let dateElement;
+    if (date) {
+      dateElement = (
+        <li className="RecentTrack__date">{date['#text']}</li>
+      );
+    }
+
     return (
       <ul
         className="RecentTrack">
@@ -29,7 +36,7 @@ let RecentTrack = React.createClass ({
               <li><strong>{artist['#text']}</strong></li>
               <li>{recentTrack.name}</li>
               <li><em>{album['#text']}</em></li>
-              <li className="RecentTrack__date">{date['#text']}</li>
+              {dateElement}
             </ul>
           </a>
         </li>
