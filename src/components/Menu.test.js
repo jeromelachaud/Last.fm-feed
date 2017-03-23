@@ -31,11 +31,11 @@ describe('<Menu /> componemts', () => {
     expect(wrapper.find('#toggleUser').length).toBe(1);
   });
 
-  it ('should have a showUSer state to be false', () => {
+  it ('should have a showUSer state set to false per default', () => {
     expect(wrapper.state().showUser).toBe(false);
   });
 
-  it ('simulates a click event one the <Link /> components with the id of "toggleUser and set the showUSer state to true"', () => {
+  it ('simulates a click event on the <Link /> components with the id of "toggleUser and set the showUSer state to true"', () => {
     wrapper.find('#toggleUser').simulate('click');
     expect(wrapper.state().showUser).toBe(true);
   });
