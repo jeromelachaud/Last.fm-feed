@@ -1,0 +1,25 @@
+exports[`<RecentTrack /> componemts should render as expected 1`] = `
+<ul
+  className="RecentTrack">
+  <li
+    className="RecentTrack_item">
+    <a>
+      <img
+        alt="a name"
+        src="album" />
+      <ul
+        className="RecentTrack__info">
+        <li>
+          <strong />
+        </li>
+        <li>
+          a name
+        </li>
+        <li>
+          <em />
+        </li>
+      </ul>
+    </a>
+  </li>
+</ul>
+`;
