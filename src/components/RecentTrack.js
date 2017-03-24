@@ -8,7 +8,7 @@ let RecentTrack = React.createClass ({
     const {
       recentTrack
     } = this.props;
-
+    
     const {
       artist,
       album,
@@ -27,7 +27,9 @@ let RecentTrack = React.createClass ({
     let imageSource;
     if (imageApiResponse.length !== 0) {
       imageSource = (imageApiResponse);
-    } else imageSource = (lastfm_placeholder);
+    } else {
+      imageSource = (lastfm_placeholder);
+    }
 
     return (
       <ul
