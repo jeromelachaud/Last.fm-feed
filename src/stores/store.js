@@ -8,6 +8,7 @@ class Store extends EventEmitter {
   constructor(defaultState) {
     super();
     this.state = defaultState;
+    this.states = [defaultState];
   }
 
   emitChange() {
@@ -28,6 +29,14 @@ class Store extends EventEmitter {
 
   setState(state) {
     this.state = state;
+    this.states.push(state);
+    this.emitChange();
+  }
+
+  undo() {
+    this.states.pop();
+    this.state = this.states[this.states.length - 1];
+    this.emitChange();
   }
 }
 

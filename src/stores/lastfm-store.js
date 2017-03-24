@@ -52,6 +52,11 @@ dispatcher.register((action) => {
   const currentState = store.getState();
   const newState = handlers[action.type](currentState, action);  
   store.setState(newState);
-  // states.push(state);
   store.emitChange();
 });
+
+/*
+setTimeout(function() {
+  store.undo();
+}, 2000);
+*/
