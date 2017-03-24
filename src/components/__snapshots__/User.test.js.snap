@@ -1,0 +1,18 @@
+exports[`<User /> componemts should render as expected 1`] = `
+<div
+  className="User">
+  <a
+    className="User__link"
+    target="blanck">
+    <div>
+      <img />
+    </div>
+    <ul
+      className="User__info">
+      <li />
+      <li />
+      <li />
+    </ul>
+  </a>
+</div>
+`;
