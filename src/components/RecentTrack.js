@@ -13,7 +13,9 @@ let RecentTrack = React.createClass ({
       artist,
       album,
       date,
-      image
+      image,
+      name,
+      url
     } = recentTrack;
 
     const imageApiResponse = image['3']['#text'];
@@ -36,14 +38,14 @@ let RecentTrack = React.createClass ({
         className="RecentTrack">
         <li
           className="RecentTrack_item">
-          <a href={recentTrack.url}>
+          <a href={url}>
             <img 
               src={imageSource} 
-              alt={recentTrack.name} />
+              alt={name} />
             <ul
               className="RecentTrack__info">
               <li><strong>{artist['#text']}</strong></li>
-              <li>{recentTrack.name}</li>
+              <li>{name}</li>
               <li><em>{album['#text']}</em></li>
               {dateElement}
             </ul>
