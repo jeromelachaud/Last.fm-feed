@@ -3,7 +3,6 @@ import Menu from './Menu';
 import './Sidebar.css';
 import logo from './logo.svg';
 
-
 let Sidebar = React.createClass ({
 
   propTypes: {
