@@ -5,7 +5,7 @@ import {
 import toJson from 'enzyme-to-json';
 import RecentTracks from './RecentTracks';
 
-const recentTracks = {};
+const recentTracks = [];
 
 describe('<RecentTracks> component', () => {
   const wrapper = shallow(<RecentTracks recentTracks={recentTracks} />);

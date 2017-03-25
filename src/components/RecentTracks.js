@@ -9,7 +9,7 @@ import {
 
 let RecentTracks = React.createClass ({
   propTypes: {
-    recentTracks: React.PropTypes.object
+    recentTracks: React.PropTypes.array
   },
 
   shouldComponentUpdate(nextProps){

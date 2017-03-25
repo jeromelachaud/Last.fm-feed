@@ -3,7 +3,7 @@ import Store from './store';
 
 const store = new Store({
   user:{},
-  recentTracks: {},
+  recentTracks: [],
   topArtists: {}
 });
 
