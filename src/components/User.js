@@ -30,12 +30,12 @@ let User = React.createClass ({
     } = user;
 
     let registeredElement;
-    if (user.registered) {
+    if (registered) {
       registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
     }
 
     let imageElement;
-    if (user.image) {
+    if (image) {
       imageElement = image[3]['#text'];
     }
 
@@ -48,7 +48,7 @@ let User = React.createClass ({
           <div>
             <img
               src={imageElement}
-              alt={user.name} />
+              alt={name} />
           </div>
           <ul
             className="User__info">
