@@ -8,6 +8,10 @@ import {
 
 let User = React.createClass ({
 
+  propTypes: {
+    user: React.PropTypes.object.isRequired
+  },
+
   componentWillMount() {
     fetchUser();
   },
@@ -57,9 +61,5 @@ let User = React.createClass ({
     );
   }
 });
-
-User.propTypes = {
-  user: React.PropTypes.shape({})
-};
 
 export default User;

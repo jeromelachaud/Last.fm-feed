@@ -8,6 +8,9 @@ import {
 } from '../actions/action-creators';
 
 let RecentTracks = React.createClass ({
+  propTypes: {
+    recentTracks: React.PropTypes.object
+  },
 
   shouldComponentUpdate(nextProps){
     return !_isEqual(nextProps.recentTracks,this.props.recentTracks);

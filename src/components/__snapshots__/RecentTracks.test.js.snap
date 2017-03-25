@@ -1,0 +1,4 @@
+exports[`<RecentTracks> component should render as expected 1`] = `
+<section
+  className="RecentTracks" />
+`;

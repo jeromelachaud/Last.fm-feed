@@ -3,6 +3,10 @@ import './TopArtist.css';
 
 let TopArtist = React.createClass ({
 
+  propTypes: {
+    topArtist: React.PropTypes.object.isRequired
+  },
+
   render() {
     const {
       topArtist

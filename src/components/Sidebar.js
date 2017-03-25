@@ -6,8 +6,11 @@ import logo from './logo.svg';
 
 let Sidebar = React.createClass ({
 
-  render() {
+  propTypes: {
+    user: React.PropTypes.object.isRequired
+  },
 
+  render() {
     const {
       user
     } = this.props;

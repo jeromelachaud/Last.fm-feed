@@ -4,6 +4,10 @@ import lastfm_placeholder from './lastfm_placeholder.svg';
 
 let RecentTrack = React.createClass ({
 
+  propTypes: {
+    recentTrack: React.PropTypes.object.isRequired
+  },
+
   render() {
     const {
       recentTrack

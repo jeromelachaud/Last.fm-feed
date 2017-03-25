@@ -5,6 +5,11 @@ import './App.css';
 
 let App = React.createClass ({
 
+  propTypes : {
+    state: React.PropTypes.object,
+    children: React.PropTypes.node.isRequired
+  },
+
   componentWillMount() {
     this.setState(store.getState());
   },
@@ -32,10 +37,5 @@ let App = React.createClass ({
     );
   }
 });
-
-App.propTypes = {
-  state: React.PropTypes.shape({}),
-  children: React.PropTypes.node.isRequired
-};
 
 export default App;

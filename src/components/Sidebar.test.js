@@ -5,9 +5,10 @@ import {
 import toJson from 'enzyme-to-json';
 import Sidebar from './Sidebar';
 import Menu from './Menu';
+const user = {};
 
 describe('<Sidebar /> componemts', () => {
-  const wrapper = shallow(<Sidebar />);
+  const wrapper = shallow(<Sidebar user={user} />);
 
   it('should render as expected', () => {
     expect(toJson(wrapper)).toMatchSnapshot();

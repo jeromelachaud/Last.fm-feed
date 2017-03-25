@@ -7,9 +7,10 @@ import Menu from './Menu';
 import {
   Link
 } from 'react-router';
+const user = {};
 
 describe('<Menu /> componemts', () => {
-  const wrapper = shallow(<Menu />);
+  const wrapper = shallow(<Menu user={user} />);
 
   it('should render as expected', () => {
     expect (toJson(wrapper)).toMatchSnapshot();
