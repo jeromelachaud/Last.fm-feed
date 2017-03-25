@@ -36,8 +36,10 @@ describe('<Menu /> componemts', () => {
     expect(wrapper.state().showUser).toBe(false);
   });
 
-  it ('simulates a click event on the <Link /> components with the id of "toggleUser and set the showUSer state to true"', () => {
+  it ('simulates clicks event on the <Link /> components with the id of "toggleUser and toggle the showUSer to true and false',() => {
     wrapper.find('#toggleUser').simulate('click');
     expect(wrapper.state().showUser).toBe(true);
+    wrapper.find('#toggleUser').simulate('click');
+    expect(wrapper.state().showUser).toBe(false);
   });
 });
