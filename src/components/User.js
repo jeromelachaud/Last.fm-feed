@@ -5,7 +5,6 @@ import {
   fetchUser
 } from '../actions/action-creators';
 
-
 let User = React.createClass ({
 
   propTypes: {
@@ -29,15 +28,8 @@ let User = React.createClass ({
       url
     } = user;
 
-    let registeredElement;
-    if (registered) {
-      registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
-    }
-
-    let imageElement;
-    if (image) {
-      imageElement = image[3]['#text'];
-    }
+    const imageElement = image['3']['#text'];
+    const registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
 
     return (
       <div
