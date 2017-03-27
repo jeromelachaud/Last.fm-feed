@@ -7,6 +7,9 @@ import {
 } from '../actions/action-creators';
 
 let TopArtists = React.createClass ({
+  propTypes: {
+    topArtists: React.PropTypes.array
+  },
 
   componentWillMount() {
     fetchTopArtists();

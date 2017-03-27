@@ -4,7 +4,8 @@ exports[`<TopArtist> component should render as expected 1`] = `
   <li
     className="TopArtist_item">
     <a>
-      <img />
+      <img
+        src="" />
       <ul
         className="TopArtist__info">
         <li>
