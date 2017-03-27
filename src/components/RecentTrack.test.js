@@ -14,7 +14,8 @@ const recentTrack = {
     {'#text' : 'album'}
   ],
   'artist': ['#text'],
-  'album': ['#text']
+  'album': ['#text'],
+  'date': ['#test']
 };
 
 describe('<RecentTrack /> componemts', () => {

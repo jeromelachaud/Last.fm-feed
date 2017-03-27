@@ -21,14 +21,13 @@ let User = React.createClass ({
     } = this.props;
 
     const {
+      image,
       name,
       playcount,
       registered,
-      image,
       url
     } = user;
 
-    const imageElement = image['3']['#text'];
     const registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
 
     return (
@@ -36,10 +35,10 @@ let User = React.createClass ({
         className="User">
         <a
           className="User__link"
-          href={url} target="blanck">
+          href={url} target="_blank">
           <div>
             <img
-              src={imageElement}
+              src={image['3']['#text']}
               alt={name} />
           </div>
           <ul

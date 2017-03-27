@@ -6,7 +6,27 @@ import toJson from 'enzyme-to-json';
 import User from './User';
 
 const user = {
-  'user':'a user'
+  'name': '',
+  'image': [
+    {
+      '#text': ''
+    },
+    {
+      '#text': ''
+    },
+    {
+      '#text': ''
+    },
+    {
+      '#text': ''
+    }
+  ],
+  'url': '',
+  'playcount': '',
+  'registered':{
+    '#text': '',
+    'unixtime': ''
+  }
 };
 
 describe('<User /> componemts', () => {

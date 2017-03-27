@@ -27,14 +27,11 @@ let RecentTracks = React.createClass ({
       recentTracks
     } = this.props;
 
-    let RecentTrackElement;
-    if (recentTracks) {
-      RecentTrackElement = _map(recentTracks, (recentTrack, i) => (
-        <RecentTrack
-          key={i}
-          recentTrack={recentTrack} />
-      ));
-    }
+    const RecentTrackElement = _map(recentTracks, (recentTrack, i) => (
+      <RecentTrack
+        key={i}
+        recentTrack={recentTrack} />
+    ));
 
     return (
     <section
