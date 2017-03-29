@@ -10,6 +10,10 @@ const menuLanguage = language.components.menu;
 
 let Menu = React.createClass ({
 
+  propTypes: {
+    user: React.PropTypes.object.isRequired
+  },
+
   getInitialState() {
     return { showUser: false };
   },

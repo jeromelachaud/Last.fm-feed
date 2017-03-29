@@ -3,15 +3,20 @@ exports[`<User /> componemts should render as expected 1`] = `
   className="User">
   <a
     className="User__link"
-    target="blanck">
+    href=""
+    target="_blank">
     <div>
-      <img />
+      <img
+        alt=""
+        src="" />
     </div>
     <ul
       className="User__info">
       <li />
       <li />
-      <li />
+      <li>
+        01/01/1970
+      </li>
     </ul>
   </a>
 </div>

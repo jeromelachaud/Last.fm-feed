@@ -5,6 +5,7 @@ exports[`<Sidebar /> componemts should render as expected 1`] = `
     alt="logo"
     className="Logo"
     src="logo.svg" />
-  <Menu />
+  <Menu
+    user={Object {}} />
 </div>
 `;

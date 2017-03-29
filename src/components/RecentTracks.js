@@ -8,6 +8,9 @@ import {
 } from '../actions/action-creators';
 
 let RecentTracks = React.createClass ({
+  propTypes: {
+    recentTracks: React.PropTypes.array
+  },
 
   shouldComponentUpdate(nextProps){
     return !_isEqual(nextProps.recentTracks,this.props.recentTracks);
@@ -26,14 +29,11 @@ let RecentTracks = React.createClass ({
       recentTracks
     } = this.props;
 
-    let RecentTrackElement;
-    if (recentTracks) {
-      RecentTrackElement = _map(recentTracks, (recentTrack, i) => (
-        <RecentTrack
-          key={i}
-          recentTrack={recentTrack} />
-      ));
-    }
+    const RecentTrackElement = _map(recentTracks, (recentTrack, i) => (
+      <RecentTrack
+        key={i}
+        recentTrack={recentTrack} />
+    ));
 
     return (
     <section

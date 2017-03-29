@@ -3,10 +3,9 @@ import {
   shallow
 } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import User from './User';
+import TopArtist from './TopArtist';
 
-const user = {
-  'name': '',
+const topArtist = {
   'image': [
     {
       '#text': ''
@@ -20,17 +19,11 @@ const user = {
     {
       '#text': ''
     }
-  ],
-  'url': '',
-  'playcount': '',
-  'registered':{
-    '#text': '',
-    'unixtime': ''
-  }
+  ]
 };
 
-describe('<User /> componemts', () => {
-  const wrapper = shallow(<User user={user}/>);
+describe('<TopArtist> component', () => {
+  const wrapper = shallow(<TopArtist topArtist={topArtist} />);
 
   it('should render as expected', () => {
     expect(toJson(wrapper)).toMatchSnapshot();

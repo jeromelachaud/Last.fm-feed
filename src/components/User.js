@@ -5,8 +5,11 @@ import {
   fetchUser
 } from '../actions/action-creators';
 
-
 let User = React.createClass ({
+
+  propTypes: {
+    user: React.PropTypes.object.isRequired
+  },
 
   componentWillMount() {
     fetchUser();
@@ -18,33 +21,25 @@ let User = React.createClass ({
     } = this.props;
 
     const {
+      image,
       name,
       playcount,
       registered,
-      image,
       url
     } = user;
 
-    let registeredElement;
-    if (user.registered) {
-      registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
-    }
-
-    let imageElement;
-    if (user.image) {
-      imageElement = image[3]['#text'];
-    }
+    const registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
 
     return (
       <div
         className="User">
         <a
           className="User__link"
-          href={url} target="blanck">
+          href={url} target="_blank">
           <div>
             <img
-              src={imageElement}
-              alt={user.name} />
+              src={image['3']['#text']}
+              alt={name} />
           </div>
           <ul
             className="User__info">
@@ -57,9 +52,5 @@ let User = React.createClass ({
     );
   }
 });
-
-User.propTypes = {
-  user: React.PropTypes.shape({})
-};
 
 export default User;

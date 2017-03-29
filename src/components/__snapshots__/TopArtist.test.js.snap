@@ -1,0 +1,23 @@
+exports[`<TopArtist> component should render as expected 1`] = `
+<ul
+  className="TopArtist">
+  <li
+    className="TopArtist_item">
+    <a>
+      <img
+        src="" />
+      <ul
+        className="TopArtist__info">
+        <li>
+          <strong />
+        </li>
+        <li>
+          <i>
+             plays
+          </i>
+        </li>
+      </ul>
+    </a>
+  </li>
+</ul>
+`;

@@ -18,6 +18,8 @@ exports[`<RecentTrack /> componemts should render as expected 1`] = `
         <li>
           <em />
         </li>
+        <li
+          className="RecentTrack__date" />
       </ul>
     </a>
   </li>
