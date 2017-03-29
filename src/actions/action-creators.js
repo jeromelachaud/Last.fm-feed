@@ -26,10 +26,10 @@ export function fetchUser() {
   });
 }
 
-export function fetchRecentTracks() {
+export function fetchRecentTracks(limit) {
   let getRecentTracks = axios.create({
     baseURL,
-    url: `?format=json&method=user.getrecenttracks&user=${userName}&api_key=${apiKey}`
+    url: `?format=json&method=user.getrecenttracks&user=${userName}&limit=${limit}&api_key=${apiKey}`
   });
   getRecentTracks()
   .then((response) => {
