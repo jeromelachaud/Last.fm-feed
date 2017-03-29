@@ -18,7 +18,9 @@ let RecentTracks = React.createClass ({
     // this.updateInterval = setInterval(() => fetchRecentTracks(2), 3000); 
   },
 
-  render() {
+  componentWillUnmount() {
+    clearInterval(this.updateInterval);
+  },
 
     const {
       recentTracks
