@@ -18,12 +18,14 @@ let RecentTracks = React.createClass ({
 
   componentWillMount() {
     fetchRecentTracks();
-    // this.updateInterval = setInterval(() => fetchRecentTracks(2), 3000); 
+    // this.updateInterval = setInterval(() => fetchRecentTracks(2), 3000);
   },
 
   componentWillUnmount() {
     clearInterval(this.updateInterval);
   },
+
+  render() {
 
     const {
       recentTracks
