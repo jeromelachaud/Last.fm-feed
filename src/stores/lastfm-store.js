@@ -1,7 +1,7 @@
 import dispatcher from '../dispatcher/dispatcher';
 import Store from './store';
 
-const store = new Store({
+export const store = new Store({
   recentTrack: {
     'artist': {
       '#text': ''
@@ -75,9 +75,7 @@ const store = new Store({
   }
 });
 
-export default store;
-
-const handlers = {
+export const handlers = {
   userRetrieved: function(state, action) {
     if (!action.user) {
       throw new Error('No user');
@@ -112,13 +110,9 @@ const handlers = {
   }
 };
 
-export {
-  handlers
-};
-
 dispatcher.register((action) => {
   const currentState = store.getState();
-  const newState = handlers[action.type](currentState, action);  
+  const newState = handlers[action.type](currentState, action);
   store.setState(newState);
   store.emitChange();
 });
