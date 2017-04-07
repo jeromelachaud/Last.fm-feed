@@ -1,26 +1,23 @@
 exports[`<Menu /> componemts should render as expected 1`] = `
 <div>
   <ul>
-    <li
-      className="Menu__item">
+    <styled.li>
       <Link
         onlyActiveOnIndex={false}
         style={Object {}}
         to="recent-tracks">
         Recent Tracks
       </Link>
-    </li>
-    <li
-      className="Menu__item">
+    </styled.li>
+    <styled.li>
       <Link
         onlyActiveOnIndex={false}
         style={Object {}}
         to="top-artists">
         Top Artists
       </Link>
-    </li>
-    <li
-      className="Menu__item">
+    </styled.li>
+    <styled.li>
       <Link
         id="toggleUser"
         onClick={[Function]}
@@ -28,7 +25,7 @@ exports[`<Menu /> componemts should render as expected 1`] = `
         style={Object {}}>
         User Info
       </Link>
-    </li>
+    </styled.li>
   </ul>
 </div>
 `;

@@ -1,11 +1,16 @@
 import React from 'react';
-import './RecentTracks.css';
+import styled from 'styled-components';
 import RecentTrack from './RecentTrack.js';
 import _map from 'lodash/map';
 import _isEqual from 'lodash/isEqual';
 import {
   fetchRecentTracks
 } from '../actions/action-creators';
+
+const RecentTrackWrapper = styled.section`
+  width: 30rem;
+  margin: 0 auto
+`;
 
 let RecentTracks = React.createClass ({
   propTypes: {
@@ -38,10 +43,9 @@ let RecentTracks = React.createClass ({
     ));
 
     return (
-    <section
-      className="RecentTracks">
+    <RecentTrackWrapper>
       {RecentTrackElement}
-    </section>
+    </RecentTrackWrapper>
     );
   }
 });

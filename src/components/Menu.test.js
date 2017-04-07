@@ -16,14 +16,6 @@ describe('<Menu /> componemts', () => {
     expect (toJson(wrapper)).toMatchSnapshot();
   });
 
-  it('should have three <li> tags', () => {
-    expect(wrapper.find('li').length).toBe(3);
-  });
-
-  it('should have three <li> tags with a className of "Menu__item"', () => {
-    expect(wrapper.find('li').find('.Menu__item').length).toBe(3);
-  });
- 
   it('should have three <Link /> components', () => {
     expect(wrapper.find(Link).length).toBe(3);
   });

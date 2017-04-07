@@ -1,11 +1,15 @@
 import React from 'react';
-import './TopArtists.css';
+import styled from 'styled-components';
 import TopArtist from './TopArtist.js';
 import _map from 'lodash/map';
 import {
   fetchTopArtists
 } from '../actions/action-creators';
 
+const TopArtistsWrapper = styled.section`
+  width: 30rem;
+  margin: 0 auto
+`;
 let TopArtists = React.createClass ({
   propTypes: {
     topArtists: React.PropTypes.array
@@ -30,10 +34,9 @@ let TopArtists = React.createClass ({
     }
 
     return (
-    <section
-      className="TopArtists">
+    <TopArtistsWrapper>
       {TopArtistElement}
-    </section>
+    </TopArtistsWrapper>
     );
   }
 });

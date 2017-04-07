@@ -1,14 +1,11 @@
 exports[`<RecentTrack /> componemts should render as expected 1`] = `
-<ul
-  className="RecentTrack">
-  <li
-    className="RecentTrack_item">
+<styled.ul>
+  <li>
     <a>
       <img
         alt="a name"
         src="album" />
-      <ul
-        className="RecentTrack__info">
+      <styled.ul>
         <li>
           <strong />
         </li>
@@ -18,10 +15,9 @@ exports[`<RecentTrack /> componemts should render as expected 1`] = `
         <li>
           <em />
         </li>
-        <li
-          className="RecentTrack__date" />
-      </ul>
+        <styled.li />
+      </styled.ul>
     </a>
   </li>
-</ul>
+</styled.ul>
 `;

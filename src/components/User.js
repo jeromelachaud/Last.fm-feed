@@ -1,9 +1,33 @@
 import React from 'react';
-import './User.css';
+import styled from 'styled-components';
 import moment from 'moment';
 import {
   fetchUser
 } from '../actions/action-creators';
+
+const UserWrapper = styled.div`
+  display: inline-block;
+  margin: 5px auto;
+  font-size: 2rem;
+`;
+
+const UserLink = styled.a`
+  display: inherit;;
+  color: #fff;
+  background-color: rgba(255,255,255,0.4);
+`;
+
+const UserInfo = styled.ul`
+  margin: 0 auto;
+  padding: 1rem 0.7rem 0.7rem 0;
+
+  li {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-right: 5px;
+  }
+`;
+
 
 let User = React.createClass ({
 
@@ -31,24 +55,21 @@ let User = React.createClass ({
     const registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
 
     return (
-      <div
-        className="User">
-        <a
-          className="User__link"
+      <UserWrapper>
+        <UserLink
           href={url} target="_blank">
           <div>
             <img
               src={image['3']['#text']}
               alt={name} />
           </div>
-          <ul
-            className="User__info">
+          <UserInfo>
             <li>{name}</li>
             <li>{playcount}</li>
             <li>{registeredElement}</li>
-          </ul>
-        </a>
-      </div>
+          </UserInfo>
+        </UserLink>
+      </UserWrapper>
     );
   }
 });

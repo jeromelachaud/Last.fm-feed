@@ -1,9 +1,0 @@
-.Menu__item a{
-  cursor: pointer;
-  color: rgba(255,255,255,1);
-}
-
-.Menu__item:hover a,
-.Menu__item.active a{
-    background-color: rgba(255,255,255,0.4);
-}

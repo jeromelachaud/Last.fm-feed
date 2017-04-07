@@ -1,7 +1,22 @@
 import React from 'react';
 import Menu from './Menu';
-import './Sidebar.css';
-import logo from './logo.svg';
+import styled from 'styled-components';
+import Logo from './Logo';
+
+const SidebarWrapper = styled.div `
+  width: 100%;
+  position: relative;
+  padding-bottom: 3rem;
+  text-align: center;
+
+  @media screen and (min-width: 990px) {
+    width: auto;
+    position: fixed;
+    right: 20px;
+    text-align: right;
+  }
+`;
+
 
 let Sidebar = React.createClass ({
 
@@ -15,12 +30,12 @@ let Sidebar = React.createClass ({
     } = this.props;
 
     return (
-      <div
+      <SidebarWrapper
         className="Sidebar">
-        <img src={logo} className="Logo" alt="logo" />
+        <Logo />
         <Menu
           user={user} />
-      </div>
+      </SidebarWrapper>
     );
   }
 });

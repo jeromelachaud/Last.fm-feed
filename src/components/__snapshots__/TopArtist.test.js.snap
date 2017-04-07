@@ -1,13 +1,10 @@
 exports[`<TopArtist> component should render as expected 1`] = `
-<ul
-  className="TopArtist">
-  <li
-    className="TopArtist_item">
+<styled.ul>
+  <li>
     <a>
       <img
         src="" />
-      <ul
-        className="TopArtist__info">
+      <styled.ul>
         <li>
           <strong />
         </li>
@@ -16,8 +13,8 @@ exports[`<TopArtist> component should render as expected 1`] = `
              plays
           </i>
         </li>
-      </ul>
+      </styled.ul>
     </a>
   </li>
-</ul>
+</styled.ul>
 `;

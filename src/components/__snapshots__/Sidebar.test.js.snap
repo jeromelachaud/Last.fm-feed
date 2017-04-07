@@ -1,11 +1,8 @@
 exports[`<Sidebar /> componemts should render as expected 1`] = `
-<div
+<styled.div
   className="Sidebar">
-  <img
-    alt="logo"
-    className="Logo"
-    src="logo.svg" />
+  <Logo />
   <Menu
     user={Object {}} />
-</div>
+</styled.div>
 `;

@@ -1,6 +1,34 @@
 import React from 'react';
-import './RecentTrack.css';
+import styled from 'styled-components';
 import lastfm_placeholder from './lastfm_placeholder.svg';
+
+const RecentTrackItem  = styled.ul`
+  margin-bottom: 5rem;
+
+  a:link,
+  a:visited {
+    color: #111111;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  a:active {
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    -webkit-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+  }
+`;
+const RecentTrackInfo = styled.ul`
+  padding: 1rem 0 0.7rem 0.7rem;
+  width: 300px;
+`;
+const RecentTrackDate = styled.li`
+  font-size: 80%
+`;
 
 let RecentTrack = React.createClass ({
 
@@ -12,7 +40,7 @@ let RecentTrack = React.createClass ({
     const {
       recentTrack
     } = this.props;
-    
+
     const {
       artist,
       album,
@@ -23,11 +51,11 @@ let RecentTrack = React.createClass ({
     } = recentTrack;
 
     const imageApiResponse = image['3']['#text'];
-    
+
     let dateElement;
     if (date) {
       dateElement = (
-        <li className="RecentTrack__date">{date['#text']}</li>
+        <RecentTrackDate>{date['#text']}</RecentTrackDate>
       );
     }
     let imageSource;
@@ -38,24 +66,21 @@ let RecentTrack = React.createClass ({
     }
 
     return (
-      <ul
-        className="RecentTrack">
-        <li
-          className="RecentTrack_item">
+      <RecentTrackItem>
+        <li>
           <a href={url}>
-            <img 
-              src={imageSource} 
+            <img
+              src={imageSource}
               alt={name} />
-            <ul
-              className="RecentTrack__info">
+            <RecentTrackInfo>
               <li><strong>{artist['#text']}</strong></li>
               <li>{name}</li>
               <li><em>{album['#text']}</em></li>
               {dateElement}
-            </ul>
+            </RecentTrackInfo>
           </a>
         </li>
-      </ul>
+      </RecentTrackItem>
     );
   }
 });

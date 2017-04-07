@@ -2,11 +2,24 @@ import React from 'react';
 import {
   Link
 } from 'react-router';
-import './Menu.css';
+import styled from 'styled-components';
 import User from './User';
 import language from '../language/language';
 
 const menuLanguage = language.components.menu;
+
+const MenuItem = styled.li`
+  a {
+    cursor: pointer;
+    color: rgba(255,255,255,1);
+    font-weight: bold;
+
+    &:hover,
+    &:active {
+      background-color: rgba(255,255,255,0.4);
+    }
+  }
+`;
 
 let Menu = React.createClass ({
 
@@ -41,28 +54,25 @@ let Menu = React.createClass ({
     return (
       <div>
         <ul>
-          <li
-            className="Menu__item">
+          <MenuItem>
             <Link
               to="recent-tracks">
               {menuLanguage.recentTracks}
             </Link>
-          </li>
-          <li
-            className="Menu__item">
+          </MenuItem>
+          <MenuItem>
             <Link
               to="top-artists">
               {menuLanguage.topArtists}
             </Link>
-          </li>
-          <li
-            className="Menu__item">
+          </MenuItem>
+          <MenuItem>
             <Link
               id="toggleUser"
               onClick={this.toggleUser}>
               {menuLanguage.userInfo}
             </Link>
-          </li>
+          </MenuItem>
         </ul>
         {this.state.showUser ? userElement : null}
       </div>

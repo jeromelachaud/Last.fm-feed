@@ -1,8 +1,6 @@
 exports[`<User /> componemts should render as expected 1`] = `
-<div
-  className="User">
-  <a
-    className="User__link"
+<styled.div>
+  <styled.a
     href=""
     target="_blank">
     <div>
@@ -10,14 +8,13 @@ exports[`<User /> componemts should render as expected 1`] = `
         alt=""
         src="" />
     </div>
-    <ul
-      className="User__info">
+    <styled.ul>
       <li />
       <li />
       <li>
         01/01/1970
       </li>
-    </ul>
-  </a>
-</div>
+    </styled.ul>
+  </styled.a>
+</styled.div>
 `;
