@@ -8,7 +8,6 @@ import {
 const UserWrapper = styled.div`
   display: inline-block;
   margin: 5px auto;
-  font-size: 2rem;
 `;
 
 const UserLink = styled.a`
@@ -22,9 +21,7 @@ const UserInfo = styled.ul`
   padding: 1rem 0.7rem 0.7rem 0;
 
   li {
-    font-size: 1.5rem;
-    font-style: italic;
-    margin-right: 5px;
+    font-weight: bold;
   }
 `;
 
