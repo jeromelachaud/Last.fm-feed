@@ -1,6 +1,5 @@
 exports[`<Sidebar /> componemts should render as expected 1`] = `
-<styled.div
-  className="Sidebar">
+<styled.div>
   <Logo />
   <Menu
     user={Object {}} />
