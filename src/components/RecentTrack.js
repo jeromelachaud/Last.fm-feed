@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import lastfm_placeholder from './lastfm_placeholder.svg';
+import lastfm_placeholder from '../assets/cover-album-placeholder.svg';
 
 const RecentTrackItem  = styled.ul`
   margin-bottom: 5rem;
