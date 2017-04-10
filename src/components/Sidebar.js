@@ -30,8 +30,7 @@ let Sidebar = React.createClass ({
     } = this.props;
 
     return (
-      <SidebarWrapper
-        className="Sidebar">
+      <SidebarWrapper>
         <Logo />
         <Menu
           user={user} />
