@@ -5,7 +5,6 @@ import {
 import toJson from 'enzyme-to-json';
 import Sidebar from './Sidebar';
 import Menu from './Menu';
-import Logo from './Logo';
 const user = {};
 
 describe('<Sidebar /> componemts', () => {
@@ -13,10 +12,6 @@ describe('<Sidebar /> componemts', () => {
 
   it('should render as expected', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
-  });
-
-  it('should have a .Sidebar class', () => {
-    expect(wrapper.find('.Sidebar').length).toBe(1);
   });
 
   it('should have a Logo component', () => {
