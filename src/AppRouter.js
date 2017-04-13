@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Router,
   Route,
-  hashHistory,
+  browserHistory,
   IndexRoute
 } from 'react-router';
 import App from './App';
@@ -13,7 +13,7 @@ let AppRouter = React.createClass ({
 
   render() {
     return (
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={RecentTracks}/>
           <Route path="/recent-tracks" component={RecentTracks} />
