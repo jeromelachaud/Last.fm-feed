@@ -3,7 +3,14 @@ import {
   store
 } from './stores/lastfm-store';
 import Sidebar from './components/Sidebar';
-import './App.css';
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  font-size: 2rem;
+`;
 
 let App = React.createClass ({
 
@@ -31,11 +38,11 @@ let App = React.createClass ({
     const appElement = React.cloneElement(this.props.children, { ...appState });
 
     return (
-      <div className="App">
+      <StyledApp>
         <Sidebar
           user={user} />
         {appElement}
-      </div>
+      </StyledApp>
     );
   }
 });
