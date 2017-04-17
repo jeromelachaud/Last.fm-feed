@@ -36,6 +36,12 @@ const LinkUserWrapper = styled.li`
   padding: 0 2rem 0 0;
 `;
 
+const UserWrapper = styled.div`
+  position: fixed;
+  top: 9.5rem;
+  right: 0;
+`;
+
 let Menu = React.createClass ({
 
   propTypes: {
@@ -62,8 +68,10 @@ let Menu = React.createClass ({
 
     let userElement;
     userElement = (
-      <User
-        user={user} />
+      <UserWrapper>
+        <User
+          user={user} />
+      </UserWrapper>
     );
 
     return (
