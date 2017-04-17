@@ -29,6 +29,13 @@ const MenuItem = styled.li`
   padding: 0 2rem 0 0;
 `;
 
+const LinkUserWrapper = styled.li`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row-reverse;
+  padding: 0 2rem 0 0;
+`;
+
 let Menu = React.createClass ({
 
   propTypes: {
@@ -73,13 +80,13 @@ let Menu = React.createClass ({
               {menuLanguage.topArtists}
             </Link>
           </MenuItem>
-          <MenuItem>
-            <Link
-              id="toggleUser"
-              onClick={this.toggleUser}>
-              {menuLanguage.userInfo}
-            </Link>
-          </MenuItem>
+            <LinkUserWrapper>
+              <Link
+                id="toggleUser"
+                onClick={this.toggleUser}>
+                {menuLanguage.userInfo}
+              </Link>
+            </LinkUserWrapper>
           {this.state.showUser ? userElement : null}
         </MenuWrapper>
 
