@@ -8,7 +8,6 @@ import language from '../language/language';
 
 const menuLanguage = language.components.menu;
 
-const MenuItem = styled.li`
 const MenuWrapper = styled.ul`
   display: flex;
   flex-grow: 1;
@@ -24,6 +23,10 @@ const MenuWrapper = styled.ul`
       background-color: rgba(255,255,255,0.4);
     }
   }
+`;
+
+const MenuItem = styled.li`
+  padding: 0 2rem 0 0;
 `;
 
 let Menu = React.createClass ({
