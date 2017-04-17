@@ -1,0 +1,9 @@
+exports[`<Topbar /> componemts should render as expected 1`] = `
+<styled.div>
+  <styled.span>
+    <Logo />
+  </styled.span>
+  <Menu
+    user={Object {}} />
+</styled.div>
+`;
