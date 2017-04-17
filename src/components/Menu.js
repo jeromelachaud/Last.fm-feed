@@ -9,6 +9,11 @@ import language from '../language/language';
 const menuLanguage = language.components.menu;
 
 const MenuItem = styled.li`
+const MenuWrapper = styled.ul`
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
   a {
     cursor: pointer;
     color: rgba(255,255,255,1);
@@ -52,8 +57,7 @@ let Menu = React.createClass ({
     );
 
     return (
-      <div>
-        <ul>
+        <MenuWrapper>
           <MenuItem>
             <Link
               to="recent-tracks">
@@ -73,9 +77,9 @@ let Menu = React.createClass ({
               {menuLanguage.userInfo}
             </Link>
           </MenuItem>
-        </ul>
-        {this.state.showUser ? userElement : null}
-      </div>
+          {this.state.showUser ? userElement : null}
+        </MenuWrapper>
+
     );
   }
 });
