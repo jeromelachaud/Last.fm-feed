@@ -1,6 +1,6 @@
 exports[`<RecentTrack /> componemts should render as expected 1`] = `
 <styled.ul>
-  <li>
+  <styled.li>
     <a>
       <img
         alt="a name"
@@ -18,6 +18,6 @@ exports[`<RecentTrack /> componemts should render as expected 1`] = `
         <styled.li />
       </styled.ul>
     </a>
-  </li>
+  </styled.li>
 </styled.ul>
 `;

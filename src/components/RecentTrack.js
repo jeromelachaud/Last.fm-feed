@@ -2,32 +2,42 @@ import React from 'react';
 import styled from 'styled-components';
 import lastfm_placeholder from '../assets/cover-album-placeholder.svg';
 
-const RecentTrackItem  = styled.ul`
-  margin-bottom: 5rem;
-
-  a:link,
-  a:visited {
-    color: #111111;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  a:active {
-    text-decoration: none;
-  }
-
-  a:hover {
-    background-color: rgba(255, 255, 255, 1);
-    -webkit-transition: background-color .3s ease-in-out;
-    transition: background-color .3s ease-in-out;
-  }
+const RecentTrackWrapper  = styled.ul`
+  margin-bottom: 2.5rem;
 `;
+
+const RecentTrackItem = styled.li`
+  display:block;
+
+  a {
+    display: inline-block;
+
+    &:link,
+    &:visited {
+      color: #111111;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      -webkit-transition: background-color .3s ease-in-out;
+      transition: background-color .3s ease-in-out;
+    }
+
+    @media screen and (min-width:1024px) {
+      display: inline-flex;
+    }
+  }
+
+`;
+
 const RecentTrackInfo = styled.ul`
-  padding: 1rem 0 0.7rem 0.7rem;
+  padding: .75rem 1rem;
   width: 300px;
+  line-height: 1.5;
 `;
 const RecentTrackDate = styled.li`
-  font-size: 80%
+  font-size: 80%;
 `;
 
 let RecentTrack = React.createClass ({
@@ -66,8 +76,8 @@ let RecentTrack = React.createClass ({
     }
 
     return (
-      <RecentTrackItem>
-        <li>
+      <RecentTrackWrapper>
+        <RecentTrackItem>
           <a href={url}>
             <img
               src={imageSource}
@@ -79,8 +89,8 @@ let RecentTrack = React.createClass ({
               {dateElement}
             </RecentTrackInfo>
           </a>
-        </li>
-      </RecentTrackItem>
+        </RecentTrackItem>
+      </RecentTrackWrapper>
     );
   }
 });
