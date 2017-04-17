@@ -1,20 +1,18 @@
 exports[`<User /> componemts should render as expected 1`] = `
-<styled.div>
-  <styled.a
-    href=""
-    target="_blank">
-    <div>
-      <img
-        alt=""
-        src="" />
-    </div>
-    <styled.ul>
-      <li />
-      <li />
-      <li>
-        01/01/1970
-      </li>
-    </styled.ul>
-  </styled.a>
-</styled.div>
+<styled.a
+  href=""
+  target="_blank">
+  <div>
+    <img
+      alt=""
+      src="" />
+  </div>
+  <styled.ul>
+    <li />
+    <li />
+    <li>
+      01/01/1970
+    </li>
+  </styled.ul>
+</styled.a>
 `;

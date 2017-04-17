@@ -5,13 +5,9 @@ import {
   fetchUser
 } from '../actions/action-creators';
 
-const UserWrapper = styled.div`
+const UserLink = styled.a`
   display: inline-block;
   margin: 5px auto;
-`;
-
-const UserLink = styled.a`
-  display: inherit;;
   color: #fff;
   background-color: rgba(255,255,255,0.4);
 `;
@@ -52,7 +48,6 @@ let User = React.createClass ({
     const registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
 
     return (
-      <UserWrapper>
         <UserLink
           href={url} target="_blank">
           <div>
@@ -66,7 +61,6 @@ let User = React.createClass ({
             <li>{registeredElement}</li>
           </UserInfo>
         </UserLink>
-      </UserWrapper>
     );
   }
 });
