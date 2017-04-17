@@ -9,7 +9,12 @@ import {
 
 const RecentTrackWrapper = styled.section`
   width: 30rem;
-  margin: 0 auto
+  margin: 0 auto;
+  padding: 10rem 0 0 0;
+
+  @media screen and (min-width:1024px) {
+    width: 60rem;
+  }
 `;
 
 let RecentTracks = React.createClass ({
