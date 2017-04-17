@@ -8,7 +8,7 @@ import {
 
 const TopArtistsWrapper = styled.section`
   width: 30rem;
-  margin: 0 auto
+  margin: 0 auto;
 `;
 let TopArtists = React.createClass ({
   propTypes: {
