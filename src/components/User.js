@@ -8,19 +8,15 @@ import {
 const UserLink = styled.a`
   display: inline-block;
   margin: 5px auto;
-  color: #fff;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255, 255, 255, 1);
 `;
 
 const UserInfo = styled.ul`
   margin: 0 auto;
   padding: 1rem 0.7rem 0.7rem 0;
-
-  li {
-    font-weight: bold;
-  }
+  text-align: right;
+  color: #111111;
 `;
-
 
 let User = React.createClass ({
 
