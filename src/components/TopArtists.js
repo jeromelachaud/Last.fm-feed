@@ -7,8 +7,10 @@ import {
 } from '../actions/action-creators';
 
 const TopArtistsWrapper = styled.section`
-  width: 30rem;
+  max-width: 1500px;
   margin: 0 auto;
+  padding: 10rem 0 0;
+  text-align: center
 `;
 let TopArtists = React.createClass ({
   propTypes: {
