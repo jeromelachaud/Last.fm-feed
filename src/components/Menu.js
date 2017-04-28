@@ -15,12 +15,15 @@ const MenuWrapper = styled.ul`
 
   a {
     cursor: pointer;
-    color: rgba(255,255,255,1);
     font-weight: bold;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
 
     &:hover,
     &:active {
-      background-color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,1);
+      transition: color .25s ease-in-out;
     }
   }
 `;
@@ -40,6 +43,10 @@ const UserWrapper = styled.div`
   position: fixed;
   top: 9.5rem;
   right: 0;
+
+  a {
+    text-transform: none;
+  };
 `;
 
 let Menu = React.createClass ({
