@@ -2,33 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 import lastfm_placeholder from '../assets/cover-album-placeholder.svg';
 
-const RecentTrackWrapper  = styled.ul`
-  margin-bottom: 2.5rem;
-`;
-
-const RecentTrackItem = styled.li`
+const RecentTrackLink = styled.a`
   display:block;
+  margin-bottom: 2.5rem;
 
-  a {
-    display: inline-block;
-
-    &:link,
-    &:visited {
-      color: #111111;
-      background-color: rgba(255, 255, 255, 0.8);
-    }
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 1);
-      -webkit-transition: background-color .3s ease-in-out;
-      transition: background-color .3s ease-in-out;
-    }
-
-    @media screen and (min-width:1024px) {
-      display: inline-flex;
-    }
+  &:link,
+  &:visited {
+    color: #111111;
+    background-color: rgba(255, 255, 255, 1);
   }
 
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: background-color .25s ease-in-out;
+  }
+
+  @media screen and (min-width:1024px) {
+    display: inline-flex;
+  }
+`;
+
+const RecentTrackImage = styled.img`
+  min-width: 300px;
+  min-height: 300px;
 `;
 
 const RecentTrackInfo = styled.ul`
@@ -76,21 +72,18 @@ let RecentTrack = React.createClass ({
     }
 
     return (
-      <RecentTrackWrapper>
-        <RecentTrackItem>
-          <a href={url}>
-            <img
-              src={imageSource}
-              alt={name} />
-            <RecentTrackInfo>
-              <li><strong>{artist['#text']}</strong></li>
-              <li>{name}</li>
-              <li><em>{album['#text']}</em></li>
+      <RecentTrackLink
+        href={url}>
+          <RecentTrackImage
+            src={imageSource}
+            alt={name} />
+          <RecentTrackInfo>
+            <li><strong>{artist['#text']}</strong></li>
+            <li>{name}</li>
+            <li><em>{album['#text']}</em></li>
               {dateElement}
-            </RecentTrackInfo>
-          </a>
-        </RecentTrackItem>
-      </RecentTrackWrapper>
+          </RecentTrackInfo>
+      </RecentTrackLink>
     );
   }
 });
