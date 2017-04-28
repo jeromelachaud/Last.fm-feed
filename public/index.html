@@ -28,4 +28,31 @@
       To create a production bundle, use `npm run build`.
     -->
   </body>
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register('./worker.js', {
+        scope: './'
+      }).then(function(registration) {
+        console.log('Yey!', registration);
+      }).catch(function(error) {
+        console.log('Boo!', error);
+      });
+    };
+    // navigator.serviceWorker.addEventListener('controllerchanger', (event) => {
+    //   console.log (
+    //     '[controllerchange] A "controllerchange" event has happened ' +
+    //     'within navigator.serviceWorker: ', event
+    //   );
+
+    //   navigator.serviceWorker.controller.addEventListener('statechange', () => {
+    //     console.log('[controllerchange][statechange] ' +
+    //       'A "statechange" has occured: ', this.state
+    //     );
+
+    //     if (this.state === 'activated') {
+    //       console.log('you can go offline');
+    //     }
+    //   });
+    // });
+  </script>
 </html>
