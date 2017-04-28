@@ -8,6 +8,7 @@ const TopBarWrapper = styled.div `
   display: flex;
   width: 100%;
   height: 10rem;
+  z-index:2;
   background-color: #000;
 `;
 
