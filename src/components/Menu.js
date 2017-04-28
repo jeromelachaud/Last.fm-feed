@@ -4,7 +4,7 @@ import {
 } from 'react-router';
 import styled from 'styled-components';
 import User from './User';
-import language from '../language/language';
+import language from '../language';
 
 const menuLanguage = language.components.menu;
 
@@ -82,28 +82,28 @@ let Menu = React.createClass ({
     );
 
     return (
-        <MenuWrapper>
-          <MenuItem>
+      <MenuWrapper>
+        <MenuItem>
+          <Link
+            to="recent-tracks">
+            {menuLanguage.recentTracks}
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link
+            to="top-artists">
+            {menuLanguage.topArtists}
+          </Link>
+        </MenuItem>
+          <LinkUserWrapper>
             <Link
-              to="recent-tracks">
-              {menuLanguage.recentTracks}
+              id="toggleUser"
+              onClick={this.toggleUser}>
+              {menuLanguage.userInfo}
             </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link
-              to="top-artists">
-              {menuLanguage.topArtists}
-            </Link>
-          </MenuItem>
-            <LinkUserWrapper>
-              <Link
-                id="toggleUser"
-                onClick={this.toggleUser}>
-                {menuLanguage.userInfo}
-              </Link>
-            </LinkUserWrapper>
-          {this.state.showUser ? userElement : null}
-        </MenuWrapper>
+          </LinkUserWrapper>
+        {this.state.showUser ? userElement : null}
+      </MenuWrapper>
 
     );
   }

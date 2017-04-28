@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import language from '../language';
 
 const topArtistLanguage = language.components.topArtist;
 
@@ -22,7 +23,7 @@ const TopArtistInfoWrapper = styled.div`
     & > div {
       color: #111111;
     }
-    }
+  }
 `;
 
 const TopArtistInfo =  styled.div`
@@ -53,9 +54,9 @@ let TopArtist = React.createClass ({
     return (
       <TopArtistWrapper
         href={url}>
-            <img
-              src={image['3']['#text']}
-              alt={topArtist.name}/>
+          <img
+            src={image['3']['#text']}
+            alt={topArtist.name}/>
           <TopArtistInfoWrapper>
             <TopArtistInfo>
               <div><strong>{name}</strong></div>
