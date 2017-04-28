@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import language from '../language';
+import colorVariables from '../constants/styles-variables';
 
+const {
+  darkGrey
+} = colorVariables;
 const topArtistLanguage = language.components.topArtist;
 
 const TopArtistWrapper = styled.a`
@@ -21,7 +25,7 @@ const TopArtistInfoWrapper = styled.div`
   &:hover {
     background-color: rgba(0, 0, 0, 0);
     & > div {
-      color: #111111;
+      color: ${darkGrey};
     }
   }
 `;

@@ -4,6 +4,11 @@ import moment from 'moment';
 import {
   fetchUser
 } from '../actions/action-creators';
+import colorVariables from '../constants/styles-variables';
+
+const {
+  darkGrey
+} = colorVariables;
 
 const UserLink = styled.a`
   display: inline-block;
@@ -15,7 +20,7 @@ const UserInfo = styled.ul`
   margin: 0 auto;
   padding: 1rem 0.7rem 0.7rem 0;
   text-align: right;
-  color: #111111;
+  color: ${darkGrey};
 `;
 
 let User = React.createClass ({

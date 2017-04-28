@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import lastfm_placeholder from '../assets/cover-album-placeholder.svg';
+import colorVariables from '../constants/styles-variables';
+
+const {
+  darkGrey
+} = colorVariables;
 
 const RecentTrackLink = styled.a`
   display:block;
@@ -8,7 +13,7 @@ const RecentTrackLink = styled.a`
 
   &:link,
   &:visited {
-    color: #111111;
+    color: ${darkGrey};
     background-color: rgba(255, 255, 255, 1);
   }
 
