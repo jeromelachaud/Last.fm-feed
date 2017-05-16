@@ -4,27 +4,24 @@ import moment from 'moment';
 import {
   fetchUser
 } from '../actions/action-creators';
+import colorVariables from '../constants/styles-variables';
 
-const UserWrapper = styled.div`
-  display: inline-block;
-  margin: 5px auto;
-`;
+const {
+  darkGrey
+} = colorVariables;
 
 const UserLink = styled.a`
-  display: inherit;;
-  color: #fff;
-  background-color: rgba(255,255,255,0.4);
+  display: inline-block;
+  margin: 5px auto;
+  background-color: rgba(255, 255, 255, 1);
 `;
 
 const UserInfo = styled.ul`
   margin: 0 auto;
   padding: 1rem 0.7rem 0.7rem 0;
-
-  li {
-    font-weight: bold;
-  }
+  text-align: right;
+  color: ${darkGrey};
 `;
-
 
 let User = React.createClass ({
 
@@ -52,7 +49,6 @@ let User = React.createClass ({
     const registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
 
     return (
-      <UserWrapper>
         <UserLink
           href={url} target="_blank">
           <div>
@@ -66,7 +62,6 @@ let User = React.createClass ({
             <li>{registeredElement}</li>
           </UserInfo>
         </UserLink>
-      </UserWrapper>
     );
   }
 });

@@ -1,29 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
+import language from '../language';
+import colorVariables from '../constants/styles-variables';
 
-const TopArtistWrapper = styled.ul`
-  margin-bottom: 5rem;
-    a:link,
-    a:visited {
-      color: #111111;
-      display: block;
-      background-color: rgba(255, 255, 255, 0.8);
-    }
+const {
+  darkGrey
+} = colorVariables;
+const topArtistLanguage = language.components.topArtist;
 
-    a:active {
-      text-decoration: none;
-    }
-
-    a:hover {
-      background-color: rgba(255, 255, 255, 1);
-      -webkit-transition: background-color .3s ease-in-out;
-      transition: background-color .3s ease-in-out;
-    }
+const TopArtistWrapper = styled.a`
+  display: inline-flex;
+  position: relative;
+  width: 300px;
+  margin:0 2rem 2rem 0;
 `;
 
-const TopArtistInfo = styled.ul`
-  padding: 1rem 0 0.7rem 0.7rem;
-  width: 300px;
+const TopArtistInfoWrapper = styled.div`
+  position:absolute;
+  top:0;right:0;bottom:0;left:0;
+  display: flex;
+  color: white;
+  background-color: rgba(255, 255, 255, .5);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0);
+    & > div {
+      color: ${darkGrey};
+    }
+  }
+`;
+
+const TopArtistInfo =  styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  flex-grow: 1;
 `;
 
 let TopArtist = React.createClass ({
@@ -45,18 +56,17 @@ let TopArtist = React.createClass ({
     } = topArtist;
 
     return (
-      <TopArtistWrapper>
-        <li>
-          <a href={url}>
-            <img
-              src={image['3']['#text']}
-              alt={topArtist.name}/>
+      <TopArtistWrapper
+        href={url}>
+          <img
+            src={image['3']['#text']}
+            alt={topArtist.name}/>
+          <TopArtistInfoWrapper>
             <TopArtistInfo>
-              <li><strong>{name}</strong></li>
-              <li><i>{playcount} plays</i></li>
+              <div><strong>{name}</strong></div>
+              <div><i>{playcount} {topArtistLanguage.playsKey}</i></div>
             </TopArtistInfo>
-          </a>
-        </li>
+          </TopArtistInfoWrapper>
       </TopArtistWrapper>
     );
   }

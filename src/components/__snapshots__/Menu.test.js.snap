@@ -1,31 +1,29 @@
 exports[`<Menu /> componemts should render as expected 1`] = `
-<div>
-  <ul>
-    <styled.li>
-      <Link
-        onlyActiveOnIndex={false}
-        style={Object {}}
-        to="recent-tracks">
-        Recent Tracks
-      </Link>
-    </styled.li>
-    <styled.li>
-      <Link
-        onlyActiveOnIndex={false}
-        style={Object {}}
-        to="top-artists">
-        Top Artists
-      </Link>
-    </styled.li>
-    <styled.li>
-      <Link
-        id="toggleUser"
-        onClick={[Function]}
-        onlyActiveOnIndex={false}
-        style={Object {}}>
-        User Info
-      </Link>
-    </styled.li>
-  </ul>
-</div>
+<styled.ul>
+  <styled.li>
+    <Link
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to="recent-tracks">
+      Recent Tracks
+    </Link>
+  </styled.li>
+  <styled.li>
+    <Link
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to="top-artists">
+      Top Artists
+    </Link>
+  </styled.li>
+  <styled.li>
+    <Link
+      id="toggleUser"
+      onClick={[Function]}
+      onlyActiveOnIndex={false}
+      style={Object {}}>
+      User Info
+    </Link>
+  </styled.li>
+</styled.ul>
 `;

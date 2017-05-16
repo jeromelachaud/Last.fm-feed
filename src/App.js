@@ -2,13 +2,10 @@ import React from 'react';
 import {
   store
 } from './stores/lastfm-store';
-import Sidebar from './components/Sidebar';
+import Topbar from './components/Topbar';
 import styled from 'styled-components';
 
 const StyledApp = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
   font-size: 2rem;
 `;
 
@@ -39,7 +36,7 @@ let App = React.createClass ({
 
     return (
       <StyledApp>
-        <Sidebar
+        <Topbar
           user={user} />
         {appElement}
       </StyledApp>

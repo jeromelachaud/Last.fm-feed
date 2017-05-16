@@ -4,21 +4,49 @@ import {
 } from 'react-router';
 import styled from 'styled-components';
 import User from './User';
-import language from '../language/language';
+import language from '../language';
 
 const menuLanguage = language.components.menu;
 
-const MenuItem = styled.li`
+const MenuWrapper = styled.ul`
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
   a {
     cursor: pointer;
-    color: rgba(255,255,255,1);
     font-weight: bold;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
 
     &:hover,
     &:active {
-      background-color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,1);
+      transition: color .25s ease-in-out;
     }
   }
+`;
+
+const MenuItem = styled.li`
+  padding: 0 2rem 0 0;
+`;
+
+const LinkUserWrapper = styled.li`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row-reverse;
+  padding: 0 2rem 0 0;
+`;
+
+const UserWrapper = styled.div`
+  position: fixed;
+  top: 9.5rem;
+  right: 0;
+
+  a {
+    text-transform: none;
+  };
 `;
 
 let Menu = React.createClass ({
@@ -47,35 +75,36 @@ let Menu = React.createClass ({
 
     let userElement;
     userElement = (
-      <User
-        user={user} />
+      <UserWrapper>
+        <User
+          user={user} />
+      </UserWrapper>
     );
 
     return (
-      <div>
-        <ul>
-          <MenuItem>
-            <Link
-              to="recent-tracks">
-              {menuLanguage.recentTracks}
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link
-              to="top-artists">
-              {menuLanguage.topArtists}
-            </Link>
-          </MenuItem>
-          <MenuItem>
+      <MenuWrapper>
+        <MenuItem>
+          <Link
+            to="recent-tracks">
+            {menuLanguage.recentTracks}
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link
+            to="top-artists">
+            {menuLanguage.topArtists}
+          </Link>
+        </MenuItem>
+          <LinkUserWrapper>
             <Link
               id="toggleUser"
               onClick={this.toggleUser}>
               {menuLanguage.userInfo}
             </Link>
-          </MenuItem>
-        </ul>
+          </LinkUserWrapper>
         {this.state.showUser ? userElement : null}
-      </div>
+      </MenuWrapper>
+
     );
   }
 });

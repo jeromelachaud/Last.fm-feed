@@ -1,33 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
 import lastfm_placeholder from '../assets/cover-album-placeholder.svg';
+import colorVariables from '../constants/styles-variables';
 
-const RecentTrackItem  = styled.ul`
-  margin-bottom: 5rem;
+const {
+  darkGrey
+} = colorVariables;
 
-  a:link,
-  a:visited {
-    color: #111111;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
+const RecentTrackLink = styled.a`
+  display:block;
+  margin-bottom: 2.5rem;
 
-  a:active {
-    text-decoration: none;
-  }
-
-  a:hover {
+  &:link,
+  &:visited {
+    color: ${darkGrey};
     background-color: rgba(255, 255, 255, 1);
-    -webkit-transition: background-color .3s ease-in-out;
-    transition: background-color .3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: background-color .25s ease-in-out;
+  }
+
+  @media screen and (min-width:1024px) {
+    display: inline-flex;
   }
 `;
+
+const RecentTrackImage = styled.img`
+  min-width: 300px;
+  min-height: 300px;
+`;
+
 const RecentTrackInfo = styled.ul`
-  padding: 1rem 0 0.7rem 0.7rem;
+  padding: .75rem 1rem;
   width: 300px;
+  line-height: 1.5;
 `;
 const RecentTrackDate = styled.li`
-  font-size: 80%
+  font-size: 80%;
 `;
 
 let RecentTrack = React.createClass ({
@@ -66,21 +77,18 @@ let RecentTrack = React.createClass ({
     }
 
     return (
-      <RecentTrackItem>
-        <li>
-          <a href={url}>
-            <img
-              src={imageSource}
-              alt={name} />
-            <RecentTrackInfo>
-              <li><strong>{artist['#text']}</strong></li>
-              <li>{name}</li>
-              <li><em>{album['#text']}</em></li>
+      <RecentTrackLink
+        href={url}>
+          <RecentTrackImage
+            src={imageSource}
+            alt={name} />
+          <RecentTrackInfo>
+            <li><strong>{artist['#text']}</strong></li>
+            <li>{name}</li>
+            <li><em>{album['#text']}</em></li>
               {dateElement}
-            </RecentTrackInfo>
-          </a>
-        </li>
-      </RecentTrackItem>
+          </RecentTrackInfo>
+      </RecentTrackLink>
     );
   }
 });

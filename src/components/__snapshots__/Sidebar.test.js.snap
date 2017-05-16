@@ -1,7 +1,0 @@
-exports[`<Sidebar /> componemts should render as expected 1`] = `
-<styled.div>
-  <Logo />
-  <Menu
-    user={Object {}} />
-</styled.div>
-`;
