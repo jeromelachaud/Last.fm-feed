@@ -2,6 +2,7 @@ import React from 'react';
 import Menu from './Menu';
 import styled from 'styled-components';
 import Logo from './Logo';
+import PropTypes from 'prop-types';
 
 const TopBarWrapper = styled.div `
   position: fixed;
@@ -19,11 +20,7 @@ const LogoWrapper = styled.span`
   margin: 2rem;
 `;
 
-let TopBar = React.createClass ({
-
-  propTypes: {
-    user: React.PropTypes.object.isRequired
-  },
+class TopBar extends React.Component {
 
   render() {
     const {
@@ -40,6 +37,10 @@ let TopBar = React.createClass ({
       </TopBarWrapper>
     );
   }
-});
+}
+
+TopBar.propTypes = {
+  user: PropTypes.object.isRequired
+};
 
 export default TopBar;

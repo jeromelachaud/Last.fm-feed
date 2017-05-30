@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import lastfm_placeholder from '../assets/cover-album-placeholder.svg';
 import colorVariables from '../constants/styles-variables';
+import PropTypes from 'prop-types';
 
 const {
   darkGrey
@@ -41,11 +42,7 @@ const RecentTrackDate = styled.li`
   font-size: 80%;
 `;
 
-let RecentTrack = React.createClass ({
-
-  propTypes: {
-    recentTrack: React.PropTypes.object.isRequired
-  },
+class RecentTrack extends React.Component {
 
   render() {
     const {
@@ -91,6 +88,10 @@ let RecentTrack = React.createClass ({
       </RecentTrackLink>
     );
   }
-});
+}
+
+RecentTrack.propTypes = {
+  recentTrack: PropTypes.object.isRequired
+};
 
 export default RecentTrack;

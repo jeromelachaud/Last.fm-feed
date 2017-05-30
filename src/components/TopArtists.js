@@ -5,6 +5,7 @@ import _map from 'lodash/map';
 import {
   fetchTopArtists
 } from '../actions/action-creators';
+import PropTypes from 'prop-types';
 
 const TopArtistsWrapper = styled.section`
   max-width: 1500px;
@@ -12,14 +13,12 @@ const TopArtistsWrapper = styled.section`
   padding: 10rem 0 0;
   text-align: center
 `;
-let TopArtists = React.createClass ({
-  propTypes: {
-    topArtists: React.PropTypes.array
-  },
+
+class TopArtists extends React.Component {
 
   componentWillMount() {
     fetchTopArtists();
-  },
+  }
 
   render() {
     const {
@@ -41,6 +40,10 @@ let TopArtists = React.createClass ({
     </TopArtistsWrapper>
     );
   }
-});
+}
+
+TopArtists.propTypes = {
+  topArtists: PropTypes.array
+};
 
 export default TopArtists;

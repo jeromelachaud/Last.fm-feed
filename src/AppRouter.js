@@ -9,7 +9,7 @@ import App from './App';
 import RecentTracks from './components/RecentTracks';
 import TopArtists from './components/TopArtists';
 
-let AppRouter = React.createClass ({
+class AppRouter extends React.Component {
 
   render() {
     return (
@@ -22,6 +22,6 @@ let AppRouter = React.createClass ({
       </Router>
     );
   }
-});
+}
 
 export default AppRouter;

@@ -5,6 +5,7 @@ import {
   fetchUser
 } from '../actions/action-creators';
 import colorVariables from '../constants/styles-variables';
+import PropTypes from 'prop-types';
 
 const {
   darkGrey
@@ -23,15 +24,11 @@ const UserInfo = styled.ul`
   color: ${darkGrey};
 `;
 
-let User = React.createClass ({
-
-  propTypes: {
-    user: React.PropTypes.object.isRequired
-  },
+class User extends React.Component {
 
   componentWillMount() {
     fetchUser();
-  },
+  }
 
   render() {
     const {
@@ -64,6 +61,10 @@ let User = React.createClass ({
         </UserLink>
     );
   }
-});
+}
+
+User.propTypes = {
+  user: PropTypes.object.isRequired
+};
 
 export default User;

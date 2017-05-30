@@ -5,6 +5,7 @@ import {
 import styled from 'styled-components';
 import User from './User';
 import language from '../language';
+import PropTypes from 'prop-types';
 
 const menuLanguage = language.components.menu;
 
@@ -49,26 +50,16 @@ const UserWrapper = styled.div`
   };
 `;
 
-let Menu = React.createClass ({
-
-  propTypes: {
-    user: React.PropTypes.object.isRequired
-  },
-
-  getInitialState() {
-    return { showUser: false };
-  },
-
-  toggleUser() {
-    if (!this.state.showUser) {
-      this.setState({showUser : true});
-    } else {
-      this.setState({showUser : false});
-    }
-  },
+class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showUser: false
+    };
+    this.toggleUser = this.toggleUser.bind(this);
+  }
 
   render() {
-
     const {
       user
     } = this.props;
@@ -107,6 +98,18 @@ let Menu = React.createClass ({
 
     );
   }
-});
+
+  toggleUser() {
+    if (!this.state.showUser) {
+      this.setState({showUser : true});
+    } else {
+      this.setState({showUser : false});
+    }
+  }
+}
+
+Menu.propTypes = {
+  user: PropTypes.object.isRequired
+};
 
 export default Menu;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import language from '../language';
 import colorVariables from '../constants/styles-variables';
+import PropTypes from 'prop-types';
 
 const {
   darkGrey
@@ -37,11 +38,7 @@ const TopArtistInfo =  styled.div`
   flex-grow: 1;
 `;
 
-let TopArtist = React.createClass ({
-
-  propTypes: {
-    topArtist: React.PropTypes.object.isRequired
-  },
+class TopArtist extends React.Component {
 
   render() {
     const {
@@ -70,6 +67,10 @@ let TopArtist = React.createClass ({
       </TopArtistWrapper>
     );
   }
-});
+}
+
+TopArtist.propTypes = {
+  topArtist: PropTypes.object
+};
 
 export default TopArtist;

@@ -6,6 +6,7 @@ import _isEqual from 'lodash/isEqual';
 import {
   fetchRecentTracks
 } from '../actions/action-creators';
+import PropTypes from 'prop-types';
 
 const RecentTrackWrapper = styled.section`
   width: 30rem;
@@ -17,23 +18,20 @@ const RecentTrackWrapper = styled.section`
   }
 `;
 
-let RecentTracks = React.createClass ({
-  propTypes: {
-    recentTracks: React.PropTypes.array
-  },
+class RecentTracks extends React.Component {
 
   shouldComponentUpdate(nextProps){
     return !_isEqual(nextProps.recentTracks,this.props.recentTracks);
-  },
+  }
 
   componentWillMount() {
     fetchRecentTracks();
     // this.updateInterval = setInterval(() => fetchRecentTracks(2), 3000);
-  },
+  }
 
   componentWillUnmount() {
     clearInterval(this.updateInterval);
-  },
+  }
 
   render() {
 
@@ -53,6 +51,10 @@ let RecentTracks = React.createClass ({
     </RecentTrackWrapper>
     );
   }
-});
+}
+
+RecentTracks.propTypes = {
+  recentTracks: PropTypes.array
+};
 
 export default RecentTracks;

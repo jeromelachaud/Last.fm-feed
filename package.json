@@ -9,6 +9,7 @@
     "flux": "^3.1.2",
     "lodash": "^4.16.4",
     "moment": "^2.15.1",
+    "prop-types": "^15.5.10",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
