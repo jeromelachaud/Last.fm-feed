@@ -46,19 +46,19 @@ class User extends React.Component {
     const registeredElement = moment.unix(registered['#text']).format('MM/DD/YYYY');
 
     return (
-        <UserLink
-          href={url} target="_blank">
-          <div>
-            <img
-              src={image['3']['#text']}
-              alt={name} />
-          </div>
-          <UserInfo>
-            <li>{name}</li>
-            <li>{playcount}</li>
-            <li>{registeredElement}</li>
-          </UserInfo>
-        </UserLink>
+      <UserLink
+        href={url} target="_blank">
+        <div>
+          <img
+            src={image['3']['#text']}
+            alt={name} />
+        </div>
+        <UserInfo>
+          <li>{name}</li>
+          <li>{playcount}</li>
+          <li>{registeredElement}</li>
+        </UserInfo>
+      </UserLink>
     );
   }
 }

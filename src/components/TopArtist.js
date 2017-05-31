@@ -55,15 +55,15 @@ class TopArtist extends React.Component {
     return (
       <TopArtistWrapper
         href={url}>
-          <img
-            src={image['3']['#text']}
-            alt={topArtist.name}/>
-          <TopArtistInfoWrapper>
-            <TopArtistInfo>
-              <div><strong>{name}</strong></div>
-              <div><i>{playcount} {topArtistLanguage.playsKey}</i></div>
-            </TopArtistInfo>
-          </TopArtistInfoWrapper>
+        <img
+          src={image['3']['#text']}
+          alt={topArtist.name}/>
+        <TopArtistInfoWrapper>
+          <TopArtistInfo>
+            <div><strong>{name}</strong></div>
+            <div><i>{playcount} {topArtistLanguage.playsKey}</i></div>
+          </TopArtistInfo>
+        </TopArtistInfoWrapper>
       </TopArtistWrapper>
     );
   }

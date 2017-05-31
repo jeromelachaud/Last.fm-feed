@@ -76,15 +76,15 @@ class RecentTrack extends React.Component {
     return (
       <RecentTrackLink
         href={url}>
-          <RecentTrackImage
-            src={imageSource}
-            alt={name} />
-          <RecentTrackInfo>
-            <li><strong>{artist['#text']}</strong></li>
-            <li>{name}</li>
-            <li><em>{album['#text']}</em></li>
-              {dateElement}
-          </RecentTrackInfo>
+        <RecentTrackImage
+          src={imageSource}
+          alt={name} />
+        <RecentTrackInfo>
+          <li><strong>{artist['#text']}</strong></li>
+          <li>{name}</li>
+          <li><em>{album['#text']}</em></li>
+          {dateElement}
+        </RecentTrackInfo>
       </RecentTrackLink>
     );
   }
