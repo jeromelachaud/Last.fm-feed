@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import RecentTrack from './RecentTrack.js';
 import _map from 'lodash/map';
 import _isEqual from 'lodash/isEqual';
-import {
-  fetchRecentTracks
-} from '../actions/action-creators';
 import PropTypes from 'prop-types';
 
 const RecentTrackWrapper = styled.section`
@@ -25,12 +22,7 @@ class RecentTracks extends React.Component {
   }
 
   componentWillMount() {
-    fetchRecentTracks();
-    // this.updateInterval = setInterval(() => fetchRecentTracks(2), 3000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.updateInterval);
+    // fetchRecentTracks();
   }
 
   render() {

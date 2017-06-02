@@ -7,7 +7,6 @@ import {
 } from 'react-router';
 import App from './App';
 import RecentTracks from './components/RecentTracks';
-import TopArtists from './components/TopArtists';
 
 class AppRouter extends React.Component {
 
@@ -17,7 +16,6 @@ class AppRouter extends React.Component {
         <Route path="/" component={App}>
           <IndexRoute component={RecentTracks}/>
           <Route path="/recent-tracks" component={RecentTracks} />
-          <Route path="/top-artists" component={TopArtists} />
         </Route>
       </Router>
     );
