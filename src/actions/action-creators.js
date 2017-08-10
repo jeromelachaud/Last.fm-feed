@@ -1,6 +1,4 @@
-import dispatcher from '../dispatcher/dispatcher';
-import actionTypes from '../constants/action-types';
-
+import lastfmStore from '../stores/lastfm-store/';
 import axios from 'axios';
 import {
   apiConstants
@@ -11,7 +9,6 @@ const {
   userName
 } = apiConstants;
 
-
 export function fetchUser() {
   let getUserInfo = axios.create({
     baseURL,
@@ -19,10 +16,8 @@ export function fetchUser() {
   });
   getUserInfo()
   .then((response) => {
-    dispatcher.dispatch({
-      type: actionTypes.userRetrieved,
-      user: response.data.user
-    });
+    console.log(response);
+    lastfmStore.addTrack(response)
   });
 }
 
