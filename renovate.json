@@ -1,0 +1,12 @@
+{
+  "extends": ["config:base"],
+  "automerge": false,
+  "automergeType": "branch",
+  "commitMessagePrefix": "[renovate-bot] - ",
+  "packageRules": [
+    {
+      "updateTypes": ["patch", "minor"],
+      "automerge": true
+    }
+  ]
+}
