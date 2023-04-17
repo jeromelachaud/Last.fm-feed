@@ -5,7 +5,7 @@
   "dependencies": {
     "axios": "^0.21.2",
     "enzyme": "^2.7.1",
-    "enzyme-to-json": "^1.5.0",
+    "enzyme-to-json": "^3.6.2",
     "flux": "^3.1.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
