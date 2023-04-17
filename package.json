@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.2",
-    "enzyme": "^2.7.1",
+    "enzyme": "^3.11.0",
     "enzyme-to-json": "^1.5.0",
     "flux": "^3.1.2",
     "lodash": "^4.17.21",
